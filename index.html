@@ -588,16 +588,32 @@
           </div>
 
           <div class="tabs" role="tablist">
+
             <button class="tab active" data-cat="all">All</button>
             <button class="tab" data-cat="chicken">Chicken</button>
-            <button class="tab" data-cat="mutton">Mutton</button>
-            <button class="tab" data-cat="seafood">Seafood</button>
+            <button class="tab" data-cat="drinks">drinks</button>
+            <button class="tab" data-cat="mutton">mutton</button>
+            <button class="tab" data-cat="machhidihesh">machhidihesh</button>
+            <button class="tab" data-cat="biryani">biryani</button>
+            <button class="tab" data-cat="chikan chaynij">chikan chaynij</button>
+            <button class="tab" data-cat="mastyahari">mastyahari</button>
+            <button class="tab" data-cat="maunsahari">maunsahari</button>
+            <button class="tab" data-cat="veg">veg</button>
+            <button class="tab" data-cat="bhojan">bhojan</button>
+            <button class="tab" data-cat="alpohar">alpohar</button>
+            <button class="tab" data-cat="breakfast">breakfast</button>
+    
+            <button class="tab" data-cat="upavas">upavas</button>
+
+
+
+           <!-- <button class="tab" data-cat="seafood">Seafood</button>
             <button class="tab" data-cat="egg">Egg</button>
             <button class="tab" data-cat="biryani">Biryani</button>
             <button class="tab" data-cat="indochinese">Indo-Chinese</button>
             <button class="tab" data-cat="starters">Starters</button>
             <button class="tab" data-cat="thali">Thali</button>
-            <button class="tab" data-cat="veg">Veg</button>
+            <button class="tab" data-cat="veg">Veg</button> -->
           </div>
         </div>
       </div>
@@ -617,7 +633,7 @@
     <button class="cart-button" id="cartButton">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>a
         <path d="M16 10a4 4 0 0 1-8 0"></path>
       </svg>
       <span class="cart-count" id="cartCount">0</span>
@@ -656,96 +672,291 @@
 
   <script>
     const data = [
-      // CHICKEN DISHES
+        // CHICKEN DISHES
       {id:1,cat:'chicken',name:'चिकन हंडी • Chicken Handi',desc:'Half/Full portion available',price:'₹250/490',tags:['H/F'],img:'img/chicken handi.jpg'},
       {id:2,cat:'chicken',name:'चिकन करी • Chicken Curry',desc:'Traditional chicken curry',price:'₹130',tags:['Curry'],img:'img/chicken curry.jpg'},
       {id:3,cat:'chicken',name:'चिकन मसाला • Chicken Masala',desc:'Spicy chicken masala',price:'₹150',tags:['Spicy'],img:'img/chicken masala.jpg'},
       {id:4,cat:'chicken',name:'चिकन फ्राय • Chicken Fry',desc:'Crispy fried chicken',price:'₹180',tags:['Crispy'],img:'img/chicken fry.jpg'},
       {id:5,cat:'chicken',name:'चिकन कोल्हापुरी • Chicken Kolhapuri',desc:'Spicy Kolhapuri style chicken',price:'₹210',tags:['Spicy'],img:'img/chicken kolhapuri.jpg'},
       {id:6,cat:'chicken',name:'बटर चिकन बोनलेस • Butter Chicken Boneless',desc:'Creamy butter chicken',price:'₹250',tags:['Creamy'],img:'img/butter chicken boneless.jpg'},
+      {id:7,cat:'chicken',name:'चिकन रस्सा  • Chicken Rassa',desc:'Aromatic chicken biryani',price:'₹45',tags:['Rassa'],img:'img/chiken rassa.jpg'},
+        
+        
 
-      // MUTTON DISHES
-      {id:7,cat:'mutton',name:'मटन हंडी • Mutton Handi',desc:'Half/Full portion available',price:'₹450/890',tags:['H/F'],img:'img/mutton_handii.jpg'},
-      {id:8,cat:'mutton',name:'मटन करी • Mutton Curry',desc:'Traditional mutton curry',price:'₹210',tags:['Curry'],img:'img/mutton_curryy.jpg'},
-      {id:9,cat:'mutton',name:'मटन मसाला • Mutton Masala',desc:'Spicy mutton masala',price:'₹230',tags:['Spicy'],img:'img/mutton_masala.jpg'},
-      {id:10,cat:'mutton',name:'मटन फ्राय • Mutton Fry',desc:'Crispy fried mutton',price:'₹250',tags:['Crispy'],img:'img/mutton_fry.jpg'},
-      {id:11,cat:'mutton',name:'मटन कोल्हापुरी • Mutton Kolhapuri',desc:'Spicy Kolhapuri style mutton',price:'₹280',tags:['Spicy'],img:'img/mutton kolhapuri.jpg'},
-      {id:12,cat:'mutton',name:'मटन कीमा • Mutton Kheema',desc:'Minced mutton preparation',price:'₹85',tags:['Minced'],img:'img/mutton kheema.jpg'},
-      {id:13,cat:'mutton',name:'मटन रस्सा • Mutton Rassa',desc:'Mutton curry soup',price:'₹60',tags:['Soup'],img:'img/mutton rassa.jpg'},
+// drinks
+      {id:1,cat:'drinks',name:'चहा • Tea',desc:'Hot refreshing tea',price:'₹10.00',tags:['Hot'],img:'img/tea.jpg'},
+      {id:2,cat:'drinks',name:'स्पेशल चहा • Special Tea',desc:'Special masala tea',price:'₹30.00',tags:['Special'],img:'img/special-tea.jpg'},
+      {id:3,cat:'drinks',name:'ब्लॅक चहा • Black Tea',desc:'Tea without milk',price:'₹12.00',tags:['Strong'],img:'img/black-tea.jpg'},
+      {id:4,cat:'drinks',name:'लिंबू चहा • Lemon Tea',desc:'Tea with lemon flavor',price:'₹15.00',tags:['Refreshing'],img:'img/lemon-tea.jpg'},
+      {id:5,cat:'drinks',name:'कॉफी • Coffee',desc:'Hot brewed coffee',price:'₹30.00',tags:['Hot'],img:'img/coffee.jpg'},
+      {id:6,cat:'drinks',name:'ब्लॅक कॉफी • Black Coffee',desc:'Coffee without milk',price:'₹20.00',tags:['Strong'],img:'img/black-coffee.jpg'},
+      {id:7,cat:'drinks',name:'दूध (ग्लास) • Milk Glass',desc:'Fresh glass of milk',price:'₹25.00',tags:['Healthy'],img:'img/milk.jpg'},
+      {id:8,cat:'drinks',name:'ताक (ग्लास) • Taak Glass',desc:'Traditional buttermilk',price:'₹15.00',tags:['Digestive'],img:'img/taak.jpg'},
+      {id:9,cat:'drinks',name:'मसाला ताक • Masala Taak',desc:'Spiced buttermilk',price:'₹25.00',tags:['Spiced'],img:'img/masala-taak.jpg'},
+      {id:10,cat:'drinks',name:'दही वाटी • Dahi Vati',desc:'Curd bowl',price:'₹20.00',tags:['Healthy'],img:'img/dahi-vati.jpg'},
+      {id:11,cat:'drinks',name:'सोलकढी (ग्लास) • Solkadhi Glass',desc:'Kokum and coconut drink',price:'₹60.00',tags:['Digestive'],img:'img/solkadhi-glass.jpg'},
+      {id:12,cat:'drinks',name:'सोलकढी (वाटी) • Solkadhi Vati',desc:'Kokum and coconut bowl',price:'₹35.00',tags:['Digestive'],img:'img/solkadhi-vati.jpg'},
+      {id:13,cat:'drinks',name:'लिंबू रस • Lime Juice',desc:'Fresh lime juice',price:'₹25.00',tags:['Refreshing'],img:'img/lime-juice.jpg'},
+      {id:14,cat:'drinks',name:'कोकम शर्बत • Kokam Sarbat',desc:'Sweet kokum drink',price:'₹35.00',tags:['Sweet'],img:'img/kokam-sarbat.jpg'},
 
-      // SEAFOOD DISHES
-      {id:14,cat:'seafood',name:'बंगडा थाली • Bangada Thali',desc:'Complete meal with mackerel',price:'₹235',tags:['Thali'],img:'img/bangada_thali.jpg'},
-      {id:15,cat:'seafood',name:'बंगडा करी • Bangada Curry',desc:'Mackerel fish curry',price:'₹140',tags:['Curry'],img:'img/bangada_curry.jpg'},
-      {id:16,cat:'seafood',name:'बंगडा फ्राय • Bangada Fry',desc:'Fried mackerel fish',price:'₹110',tags:['Fried'],img:'img/bangada_fry.jpg'},
-      {id:17,cat:'seafood',name:'बॉम्बिल फ्राय (३ पीस) • Bombil Fry (3 pcs)',desc:'Fried bombay duck',price:'₹80',tags:['Fried'],img:'img/bombil_fry.jpg'},
-      {id:18,cat:'seafood',name:'बॉम्बिल थाली • Bombil Thali',desc:'Complete meal with bombay duck',price:'₹190',tags:['Thali'],img:'img/bombil_thali.jpg'},
-      {id:19,cat:'seafood',name:'प्रॉन्स राइस प्लेट • Prawns Rice Plate',desc:'Prawns with rice meal',price:'₹275',tags:['Rice'],img:'img/prawns_rice_plate.jpg'},
-      {id:20,cat:'seafood',name:'प्रॉन्स मसाला • Prawns Masala',desc:'Spicy prawns masala',price:'₹240',tags:['Spicy'],img:'img/prawns_masala.jpg'},
-      {id:21,cat:'seafood',name:'प्रॉन्स फ्राय • Prawns Fry',desc:'Fried prawns',price:'₹100',tags:['Fried'],img:'img/prawns_fry.jpg'},
-      {id:22,cat:'seafood',name:'प्रॉन्स रवा फ्राय • Prawns Rava Fry',desc:'Semolina coated fried prawns',price:'₹100',tags:['Fried'],img:'img/prawns_rava_fry.jpg'},
-      {id:23,cat:'seafood',name:'पॉम्फ्रेट फ्राय • Pomfret Fry',desc:'Fried pomfret fish',price:'₹100',tags:['Fried'],img:'img/pomfret_fry.jpg'},
-      {id:24,cat:'seafood',name:'सुरमई फ्राय • Surmai Fry',desc:'Fried king fish',price:'₹100',tags:['Fried'],img:'img/surmai_fry.jpg'},
-      {id:25,cat:'seafood',name:'फिश रस्सा • Fish Rassa',desc:'Fish curry soup',price:'₹50',tags:['Soup'],img:'img/fish_rassa.jpg'},
-      {id:26,cat:'seafood',name:'जवाला प्लेट • Javala Plate',desc:'Small fish plate',price:'₹55',tags:['Fried'],img:'img/javala_plate.jpg'},
 
-      // EGG DISHES
-      {id:27,cat:'egg',name:'अंडा भुर्जी • Anda Bhurji',desc:'Scrambled eggs (Single/Double)',price:'₹70/120',tags:['Single/Double'],img:'img/anda_bhurji.jpg'},
-      {id:28,cat:'egg',name:'अंडा मसाला • Anda Masala',desc:'Spicy egg curry (Single/Double)',price:'₹80/130',tags:['Single/Double'],img:'img/anda_masala.jpg'},
-      {id:29,cat:'egg',name:'अंडा मसाला फ्राय • Anda Masala Fry',desc:'Spicy fried eggs (Single/Double)',price:'₹80/130',tags:['Single/Double'],img:'img/anda_masala_fry.jpg'},
-      {id:30,cat:'egg',name:'ऑमलेट • Omlette',desc:'Plain omelette (Single/Double)',price:'₹30/50',tags:['Single/Double'],img:'img/omlette.jpg'},
-      {id:31,cat:'egg',name:'उबला अंडा • Boiled Egg',desc:'Boiled eggs (Single/Double)',price:'₹20/40',tags:['Single/Double'],img:'img/boiled_egg.jpg'},
+        // MUTTON DISHES
+      {id:1,cat:'mutton',name:'मटण हंडी • Mutton Handi',desc:'Half/Full portion available',price:'₹450/890',tags:['H/F'],img:'img/mutton handi.jpg'},
+      {id:2,cat:'mutton',name:'मटण करी • Mutton Curry',desc:'Traditional mutton curry',price:'₹210',tags:['Curry'],img:'img/mutton curry.jpg'},
+      {id:3,cat:'mutton',name:'मटण मसाला •        Mutton Masala',desc:'Spicy mutton masala',price:'₹230',tags:['Spicy'],img:'img/mutton masala.jpg'},
+        {id:4,cat:'mutton',name:'मटण फ्राय • Mutton Fry',desc:'Crispy fried mutton',price:'₹250',tags:['Crispy'],img:'img/mutton fry.jpg'},
+        {id:5,cat:'mutton',name:'मटण कोल्हापुरी • Mutton Kolhapuri',desc:'Spicy Kolhapuri style mutton',price:'₹280',tags:['Spicy'],img:'img/mutton kolhapuri.jpg'},
+        {id:6,cat:'mutton',name:'मटण रस्सा  • Mutton Rassa',desc:'Aromatic mutton Rassa',price:'₹60',tags:['Rassa'],img:'img/mutton biryani.jpg'},
+        {id:6,cat:'mutton',name:'मटण खिमा   • Mutton kheema',desc:'Aromatic mutton kheema',price:'₹85',tags:['kheema'],img:'img/mutton biryani.jpg'},
 
-      // BIRYANI
-      {id:32,cat:'biryani',name:'चिकन बिरयानी • Chicken Biryani',desc:'Half/Full portion available',price:'₹110/200',tags:['H/F'],img:'img/chicken_biryani.jpg'},
-      {id:33,cat:'biryani',name:'मटन बिरयानी • Mutton Biryani',desc:'Half/Full portion available',price:'₹160/300',tags:['H/F'],img:'img/mutton_biryani.jpg'},
-      {id:34,cat:'biryani',name:'प्रॉन्स बिरयानी • Prawns Biryani',desc:'Half/Full portion available',price:'₹170/350',tags:['H/F'],img:'img/prawns_biryani.jpg'},
-      {id:35,cat:'biryani',name:'अंडा बिरयानी • Anda Biryani',desc:'Egg biryani',price:'₹140',tags:['Egg'],img:'img/anda_biryani.jpg'},
 
-      // INDO-CHINESE
-      {id:36,cat:'indochinese',name:'पनीर चिल्ली ड्राई • Paneer Chilli Dry',desc:'Dry paneer chilli',price:'₹190',tags:['Dry'],img:'img/paneer_chilli_dry.jpg'},
-      {id:37,cat:'indochinese',name:'पनीर चिल्ली ग्रेवी • Paneer Chilli Gravy',desc:'Paneer chilli with gravy',price:'₹210',tags:['Gravy'],img:'img/paneer_chilli_gravy.jpg'},
-      {id:38,cat:'indochinese',name:'चिकन चिल्ली ड्राई • Chicken Chilli Dry',desc:'Dry chicken chilli',price:'₹220',tags:['Dry'],img:'img/chicken_chilli_dry.jpg'},
-      {id:39,cat:'indochinese',name:'चिकन चिल्ली ग्रेवी • Chicken Chilli Gravy',desc:'Chicken chilli with gravy',price:'₹240',tags:['Gravy'],img:'img/chicken_chilli_gravy.jpg'},
-      {id:40,cat:'indochinese',name:'चिकन लॉलीपॉप • Chicken Lollypop',desc:'Chicken lollipop (4/8 pcs)',price:'₹120/230',tags:['4/8 pcs'],img:'img/chicken_lollypop.jpg'},
-      {id:41,cat:'indochinese',name:'एप्पल चिकन लॉलीपॉप • Apple Chicken Lollypop',desc:'Special apple chicken lollipop',price:'₹130/250',tags:['Special'],img:'img/apple_chicken_lollypop.jpg'},
-      {id:42,cat:'indochinese',name:'चिकन क्रिस्पी • Chicken Crispy',desc:'Crispy chicken',price:'₹150/290',tags:['Crispy'],img:'img/chicken_crispy.jpg'},
-      {id:43,cat:'indochinese',name:'चिकन मंचाऊ सूप • Chicken Manchow Soup',desc:'Chicken manchow soup',price:'₹90/110',tags:['Soup'],img:'img/chicken_manchow_soup.jpg'},
-      {id:44,cat:'indochinese',name:'चिकन स्वीटकॉर्न सूप • Chicken Sweetcorn Soup',desc:'Chicken sweetcorn soup',price:'₹80/150',tags:['Soup'],img:'img/chicken_sweetcorn_soup.jpg'},
-      {id:45,cat:'indochinese',name:'चिकन शेज़वान सूप • Chicken Schezwan Soup',desc:'Spicy schezwan soup',price:'₹110/210',tags:['Spicy'],img:'img/chicken_schezwan_soup.jpg'},
-      {id:46,cat:'indochinese',name:'चिकन फ्राइड राइस • Chicken Fried Rice',desc:'Chicken fried rice',price:'₹120/240',tags:['Rice'],img:'img/chicken_fried_rice.jpg'},
-      {id:47,cat:'indochinese',name:'चिकन शेज़वान फ्राइड राइस • Chicken Schezwan Fried Rice',desc:'Spicy schezwan fried rice',price:'₹160/300',tags:['Spicy'],img:'img/chicken_schezwan_fried_rice.jpg'},
+        //mastyahari DISHES
 
-      // STARTERS & SNACKS
-      {id:48,cat:'starters',name:'कीमा पाव • Kheema Pav',desc:'Minced meat with bread',price:'₹95',tags:['Snack'],img:'img/kheema_pav.jpg'},
-      {id:49,cat:'starters',name:'जवाला भाकरी • Javala Bhakri',desc:'Small fish with bhakri',price:'₹75',tags:['Snack'],img:'img/javala_bhakri.jpg'},
-      {id:50,cat:'starters',name:'चिकन वडे • Chicken Vade',desc:'Chicken vade',price:'₹150',tags:['Snack'],img:'img/chicken_vade.jpg'},
-      {id:51,cat:'starters',name:'मटन वडे • Mutton Vade',desc:'Mutton vade',price:'₹190',tags:['Snack'],img:'img/mutton_vade.jpg'},
-      {id:52,cat:'starters',name:'भजणी वडा प्लेट • Bhajani Vada Plate',desc:'Mixed grain vada plate',price:'₹60',tags:['4 pcs'],img:'img/bhajani_vada_plate.jpg'},
-      {id:53,cat:'starters',name:'सिंगल भजणी वडा • Single Bhajani Vada',desc:'Single mixed grain vada',price:'₹15',tags:['Single'],img:'img/single_bhajani_vada.jpg'},
+        // NON-VEG THALI
+{id: 1, cat: 'thali', name: 'फियर स्टार थाळी | Fear Star Thali (Chicken Special)', desc: '2 Chapati OR 1 Bhakari, Boiled Egg, Chicken Sukka, Chicken Rassa Vati, Rice Vati, Solkadhi', price: '₹???', tags: ['Non-Veg', 'Combo'], img: 'img/fear-star-thali.jpg'},
 
-      // THALI
-      {id:54,cat:'thali',name:'मटन वडे थाली • Mutton Vade Thali',desc:'4 Vade, Rice, Mutton Masala, Mutton Rassa, Solkadhi',price:'₹330',tags:['Thali'],img:'img/mutton_vade_thali.jpg'},
-      {id:55,cat:'thali',name:'चिकन वडे थाली • Chicken Vade Thali',desc:'4 Vade, Rice, Chicken Masala, Chicken Rassa, Solkadhi',price:'₹270',tags:['Thali'],img:'img/chicken_vade_thali.jpg'},
-      {id:56,cat:'thali',name:'मटन राइस थाली • Mutton Rice Thali',desc:'2 Chapati/1 Bhakari, Rice, Mutton Sukka, Mutton Rassa, Solkadhi',price:'₹270',tags:['Thali'],img:'img/mutton_rice_thali.jpg'},
-      {id:57,cat:'thali',name:'मटन स्पेशल राइस प्लेट • Mutton Special Rice Plate',desc:'2 Chapati/1 Bhakari, Mutton Kheema, Mutton Masala, Mutton Rassa Vati, Rice Vati, Solkadhi',price:'₹330',tags:['Special'],img:'img/mutton_special_rice_plate.jpg'},
-      {id:58,cat:'thali',name:'चिकन राइस थाली • Chicken Rice Thali',desc:'2 Chapati/1 Bhakari, Rice, Chicken Sukka, Chicken Rassa, Solkadhi',price:'₹250',tags:['Thali'],img:'img/chicken_rice_thali.jpg'},
-      {id:59,cat:'thali',name:'चिकन स्पेशल राइस प्लेट • Chicken Special Rice Plate',desc:'2 Chapati/1 Bhakari, Boiled Egg, Chicken Sukka, Chicken Rassa Vati, Rice Vati, Solkadhi',price:'₹290',tags:['Special'],img:'img/chicken_special_rice_plate.jpg'},
-      {id:60,cat:'thali',name:'सुरमई फ्राय थाली • Surmai Fry Thali',desc:'2 Chapati/1 Bhakari, Rice, Surmai Fry, Rassa, Solkadhi Vati',price:'₹280',tags:['Thali'],img:'img/surmai_fry_thali.jpg'},
-      {id:61,cat:'thali',name:'बंगडा फ्राय थाली • Bangda Fry Thali',desc:'2 Chapati/1 Bhakari, Rice, Bangda Fry, Rassa, Solkadhi Vati',price:'₹235',tags:['Thali'],img:'img/bangda_fry_thali.jpg'},
-      {id:62,cat:'thali',name:'पॉम्फ्रेट फ्राय थाली • Pomfret Fry Thali',desc:'2 Chapati/1 Bhakari, Rice, Pomfret Fry, Rassa, Solkadhi Vati',price:'₹300',tags:['Thali'],img:'img/pomfret_fry_thali.jpg'},
-      {id:63,cat:'thali',name:'प्रॉन्स मसाला थाली • Prawns Masala Thali',desc:'2 Chapati/1 Bhakari, Rice, Prawns Masala, Rassa, Solkadhi Vati',price:'₹275',tags:['Thali'],img:'img/prawns_masala_thali.jpg'},
-      {id:64,cat:'thali',name:'प्रॉन्स फ्राय थाली • Prawns Fry Thali',desc:'2 Chapati/1 Bhakari, Rice, Prawns Fry, Rassa, Solkadhi Vati',price:'₹260',tags:['Thali'],img:'img/prawns_fry_thali.jpg'},
-      {id:65,cat:'thali',name:'अंडा मसाला थाली • Anda Masala Thali',desc:'2 Chapati/1 Bhakari, Rice, Anda Masala, Rassa, Solkadhi Vati',price:'₹180',tags:['Thali'],img:'img/anda_masala_thali.jpg'},
+// MASTYAHARI THALI
+{id: 2, cat: 'mastyahari', name: 'सुरमाई फ्राय थाळी | Surmai Fry Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Surmai Fry, Rassa, Solkadhi Vati', price: '₹550', tags: ['Seafood', 'Fry'], img: 'img/surmai-thali.jpg'},
+{id: 3, cat: 'mastyahari', name: 'बांगडा फ्राय थाळी | Bangda Fry Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Bangda Fry, Rassa, Solkadhi Vati', price: '₹250', tags: ['Seafood', 'Fry'], img: 'img/bangda-thali.jpg'},
+{id: 4, cat: 'mastyahari', name: 'पॉमफ्रेट फ्राय थाळी | Pomfret Fry Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Pomfret Fry, Rassa, Solkadhi Vati', price: '₹590', tags: ['Seafood', 'Fry'], img: 'img/pomfret-thali.jpg'},
+{id: 5, cat: 'mastyahari', name: 'कोळंबी मसाला थाळी | Prawns Masala Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Prawns Masala, Rassa, Solkadhi Vati', price: '₹350', tags: ['Seafood', 'Gravy'], img: 'img/prawns-masala-thali.jpg'},
+{id: 6, cat: 'mastyahari', name: 'कोळंबी फ्राय थाळी | Prawns Fry Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Prawns Fry, Rassa, Solkadhi Vati', price: '₹380', tags: ['Seafood', 'Fry'], img: 'img/prawns-fry-thali.jpg'},
+{id: 7, cat: 'mastyahari', name: 'अंडा मसाला थाळी | Anda Masala Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Anda Masala, Rassa, Solkadhi Vati', price: '₹145', tags: ['Egg', 'Gravy'], img: 'img/anda-masala-thali.jpg'},
 
-      // VEG DISHES (NEWLY ADDED)
-      {id:66,cat:'veg',name:'पोली भाजी • Poli Bhaji',desc:'Poli/Chapati with vegetable curry',price:'₹80',tags:['Veg'],img:'img/poli_bhaji.jpg'},
-      {id:67,cat:'veg',name:'मिनी थाली • Mini Thali',desc:'Small veg thali with multiple items',price:'₹120',tags:['Thali'],img:'img/mini_thali.jpg'},
-      {id:68,cat:'veg',name:'लिमिटेड वेज थाली • Limited Veg Thali',desc:'Regular veg thali with complete meal',price:'₹180',tags:['Thali'],img:'img/limited_veg_thali.jpg'},
-      {id:69,cat:'veg',name:'स्पेशल राइस प्लेट • Special Rice Plate',desc:'Special veg rice plate',price:'₹220',tags:['Special'],img:'img/special_rice_plate.jpg'},
-      {id:70,cat:'veg',name:'अमंत्रण स्पेशल राइस प्लेट • Amantran Sp. Rice Plate',desc:'Restaurant special veg rice plate',price:'₹280',tags:['Special'],img:'img/amantran_special_rice_plate.jpg'},
-      {id:71,cat:'veg',name:'वांगी भाकरी • Vang Bhakari',desc:'Brinjal curry with bhakri',price:'₹110',tags:['Veg'],img:'img/vang_bhakari.jpg'},
-      {id:72,cat:'veg',name:'झुणका/पिटले भाकरी • Jhunka/Pitale Bhakari',desc:'Gram flour curry with bhakri',price:'₹90',tags:['Veg'],img:'img/jhunka_bhakari.jpg'}
-    ];
+//machhidihesh DISHES
+{id: 8, cat: 'machhidihesh', name: 'बांगडा करी | Bangada Curry', desc: 'Spicy Mackerel Curry', price: '140', tags: ['Seafood', 'Gravy'], img: 'img/bangada-curry.jpg'},
+{id: 9, cat: 'machhidihesh', name: 'बांगडा फ्राय | Bangada Fry', desc: 'Fried Mackerel', price: '₹110', tags: ['Seafood', 'Fry'], img: 'img/bangada-fry.jpg'},
+{id: 10, cat: 'machhidihesh', name: 'बोंबिल फ्राय (२ तुकडे) | Bombil Fry (2 Pcs)', desc: 'Fried Bombay Duck', price: '₹80', tags: ['Seafood', 'Fry'], img: 'img/bombil-fry.jpg'},
+{id: 11, cat: 'machhidihesh', name: 'बोंबिल थाळी | Bombil Thali', desc: 'Bombay Duck Thali', price: '₹190', tags: ['Seafood', 'Combo'], img: 'img/bombil-thali.jpg'},
+{id: 12, cat: 'machhidihesh', name: 'कोळंबी राईस प्लेट | Prawns Rice Plate', desc: 'Prawns served with Rice', price: '₹275', tags: ['Seafood', 'Rice'], img: 'img/prawns-rice.jpg'},
+{id: 13, cat: 'machhidihesh', name: 'कोळंबी रवा फ्राय | Prawns  Fry', desc: 'Prawns fried in Semolina coating', price: 'APA/APS', tags: ['Seafood', 'Fry'], img: 'img/prawns-rava-fry.jpg'},
+{id: 14, cat: 'machhidihesh', name: 'पॉमफ्रेट फ्राय | Pomfret Fry', desc: 'Fried Pomfret', price: '₹APA/APS', tags: ['Seafood', 'Fry'], img: 'img/pomfret-fry.jpg'},
+{id: 15, cat: 'machhidihesh', name: 'सुरमाई फ्राय | Surmai Fry', desc: 'Fried King Fish', price: '₹APS/APS', tags: ['Seafood', 'Fry'], img: 'img/surmai-fry.jpg'},
+{id: 16, cat: 'machhidihesh', name: 'फिश रस्सा | Fish Rassa', desc: 'Spicy Fish Curry Soup', price: '₹50', tags: ['Seafood', 'Gravy'], img: 'img/fish-rassa.jpg'},
+{id: 17, cat: 'machhidihesh', name: 'जवला प्लेट | Javala Plate', desc: 'Small Fish Fry Plate', price: '₹55', tags: ['Seafood', 'Fry'], img: 'img/javala-plate.jpg'},
+{id: 18, cat: 'machhidihesh', name: 'कोळंबी मसाला | kolambi masala', desc: 'Small Fish Fry Plate', price: '₹55', tags: ['Seafood', 'Fry'], img: 'img/kolambi masala.jpg'},
+{id: 19, cat: 'machhidihesh', name: 'कोळंबी  फ्राय | Prawns  Fry', desc: 'Prawns fried in Semolina coating', price: 'APA/APS', tags: ['Seafood', 'Fry'], img: 'img/prawns-rava-fry.jpg'},
+{id: 20, cat: 'machhidihesh', name: 'बांगडा फ्राय | Bangada Fry', desc: 'Prawns fried in Semolina coating', price: 'APA/APS', tags: ['Seafood', 'Fry'], img: 'img/bangda fry.jpg'},
+
+
+
+// BIRYANI ITEMS
+{id: 18, cat: 'biryani', name: 'चिकन बिर्याणी | Chicken Biryani', desc: 'Flavorful chicken biryani', price: 'H: ₹110, F: ₹200', tags: ['Non-Veg', 'Rice'], img: 'img/chicken-biryani.jpg'},
+{id: 19, cat: 'biryani', name: 'मटण बिर्याणी | Mutton Biryani', desc: 'Spicy mutton biryani', price: 'H: ₹160, F: ₹300', tags: ['Non-Veg', 'Rice'], img: 'img/mutton-biryani.jpg'},
+{id: 20, cat: 'biryani', name: 'कोळंबी बिर्याणी | Prawns Biryani', desc: 'Prawns biryani with rich spices', price: 'H: ₹170, F: ₹350', tags: ['Seafood', 'Rice'], img: 'img/prawns-biryani.jpg'},
+{id: 21, cat: 'biryani', name: 'अंडा बिर्याणी | Anda Biryani', desc: 'Egg biryani with boiled eggs', price: '₹140', tags: ['Egg', 'Rice'], img: 'img/anda-biryani.jpg'},
+{id: 22, cat: 'biryani', name: 'चिकन दम बिर्याणी | Chicken Dum Biryani', desc: 'Slow-cooked chicken dum biryani', price: 'H: ₹140, F: ₹250', tags: ['Non-Veg', 'Rice'], img: 'img/chicken-dum-biryani.jpg'},
+{id: 23, cat: 'biryani', name: 'मटण दम बिर्याणी | Mutton Dum Biryani', desc: 'Slow-cooked mutton dum biryani', price: 'H: ₹190, F: ₹350', tags: ['Non-Veg', 'Rice'], img: 'img/mutton-dum-biryani.jpg'},
+
+// CHILLI ITEMS
+{id: 24, cat: 'biryani', name: 'पनीर चिल्ली ड्राय | Paneer Chilli Dry', desc: 'Crispy paneer with chilli peppers', price: '₹190', tags: ['Veg', 'Starter'], img: 'img/paneer-chilli-dry.jpg'},
+{id: 25, cat: 'biryani', name: 'पनीर चिल्ली ग्रेवी | Paneer Chilli Gravy', desc: 'Paneer in spicy chilli gravy', price: '₹210', tags: ['Veg', 'Main Course'], img: 'img/paneer-chilli-gravy.jpg'},
+{id: 26, cat: 'biryani', name: 'चिकन चिल्ली ड्राय | Chicken Chilli Dry', desc: 'Spicy chicken chilli dry', price: '₹220', tags: ['Non-Veg', 'Starter'], img: 'img/chicken-chilli-dry.jpg'},
+{id: 27, cat: 'biryani', name: 'चिकन चिल्ली ग्रेवी | Chicken Chilli Gravy', desc: 'Chicken in spicy chilli gravy', price: '₹240', tags: ['Non-Veg', 'Main Course'], img: 'img/chicken-chilli-gravy.jpg'},
+
+
+//chikan chaynij DISHES
+// ========== 1000062832.png (STARTERS & SOUPS) ==========
+{id: 28, cat: 'chikan chaynij', name: 'चिकन लॉलीपॉप | Chicken Lollypop', desc: 'Crispy chicken appetizers', price: 'H: ₹120, F: ₹230', tags: ['Non-Veg', 'Starter'], img: 'img/chicken-lollypop.jpg'},
+{id: 29, cat: 'chikan chaynij', name: 'ॲपल चिकन लॉलीपॉप | Apple Chicken Lollypop', desc: 'Chicken lollypop with apple glaze', price: 'H: ₹150, F: ₹280', tags: ['Non-Veg', 'Starter'], img: 'img/apple-chicken-lollypop.jpg'},
+{id: 30, cat: 'chikan chaynij', name: 'चिकन ६५ | Chicken 65', desc: 'Spicy deep-fried chicken bites', price: 'H: ₹130, F: ₹250', tags: ['Non-Veg', 'Starter'], img: 'img/chicken-65.jpg'},
+{id: 31, cat: 'chikan chaynij', name: 'चिकन क्रिस्पी | Chicken Crispy', desc: 'Crispy fried chicken strips', price: 'H: ₹150, F: ₹290', tags: ['Non-Veg', 'Starter'], img: 'img/chicken-crispy.jpg'},
+{id: 32, cat: 'chikan chaynij', name: 'चिकन मँचो सूप | Chicken Manchow Soup', desc: 'Spicy chicken Manchow soup', price: 'H: ₹90, F: ₹110', tags: ['Non-Veg', 'Soup'], img: 'img/chicken-manchow-soup.jpg'},
+{id: 33, cat: 'chikan chaynij', name: 'चिकन स्वीटकॉर्न सूप | Chicken Sweetcorn Soup', desc: 'Chicken and sweetcorn soup', price: 'H: ₹80, F: ₹150', tags: ['Non-Veg', 'Soup'], img: 'img/chicken-sweetcorn-soup.jpg'},
+{id: 34, cat: 'chikan chaynij', name: 'चिकन शेजवान सूप | Chicken Schezwan Soup', desc: 'Spicy Schezwan-style chicken soup', price: 'H: ₹110, F: ₹210', tags: ['Non-Veg', 'Soup'], img: 'img/chicken-schezwan-soup.jpg'},
+{id: 35, cat: 'chikan chaynij', name: 'चिकन फ्राइड राईस | Chicken Fried Rice', desc: 'Classic chicken fried rice', price: 'H: ₹120, F: ₹240', tags: ['Non-Veg', 'Rice'], img: 'img/chicken-fried-rice.jpg'},
+{id: 36, cat: 'chikan chaynij', name: 'चिकन शेजवान फ्राइड राईस | Chicken Schezwan Fried Rice', desc: 'Spicy Schezwan chicken fried rice', price: 'H: ₹160, F: ₹300', tags: ['Non-Veg', 'Rice'], img: 'img/chicken-schezwan-rice.jpg'},
+
+// ========== 1000062833.png (SNACKS) ==========
+{id: 37, cat: 'chikan chaynij', name: 'किमा पाव | Kheema Pav', desc: 'Spiced minced meat with bread', price: '₹95', tags: ['Non-Veg', 'Snack'], img: 'img/kheema-pav.jpg'},
+{id: 38, cat: 'chikan chaynij', name: 'जवला भाकरी | Javala Bhakri', desc: 'Small fish with millet bread', price: '₹75', tags: ['Seafood', 'Snack'], img: 'img/javala-bhakri.jpg'},
+{id: 39, cat: 'chikan chaynij', name: 'चिकन वडा | Chicken Vade', desc: 'Chicken stuffed fried dumplings', price: '₹150', tags: ['Non-Veg', 'Snack'], img: 'img/chicken-vade.jpg'},
+{id: 40, cat: 'chikan chaynij', name: 'मटण वडा | Mutton Vade', desc: 'Mutton stuffed fried dumplings', price: '₹190', tags: ['Non-Veg', 'Snack'], img: 'img/mutton-vade.jpg'},
+{id: 41, cat: 'chikan chaynij', name: 'भजणी वडा प्लेट | Bhajani Vada Plate', desc: 'Mixed grain fritters plate', price: '₹60', tags: ['Veg', 'Snack'], img: 'img/bhajani-vada-plate.jpg'},
+{id: 42, cat: 'chikan chaynij', name: 'सिंगल भजणी वडा | Single Bhajani Vada', desc: 'Single mixed grain fritter', price: '₹15', tags: ['Veg', 'Snack'], img: 'img/single-bhajani-vada.jpg'},
+{id: 43, cat: 'chikan chaynij', name: 'साखर वडाणा | Sugar Vadana', desc: 'Sweet fried dumplings', price: '₹15', tags: ['Veg', 'Sweet'], img: 'img/sugar-vadana.jpg'},
+{id: 44, cat: 'chikan chaynij', name: 'तर्जुळ | Tarjuh', desc: 'Special snack (ask for details)', price: '₹400', tags: ['Special'], img: 'img/tarjuh.jpg'},
+
+// ========== 1000062834.png (CHICKEN CURRIES) ==========
+{id: 45, cat: 'chikan chaynij', name: 'चिकन हंडी | Chicken Handi', desc: 'Chicken cooked in traditional handi', price: 'H: ₹250, F: ₹490', tags: ['Non-Veg', 'Gravy'], img: 'img/chicken-handi.jpg'},
+{id: 46, cat: 'chikan chaynij', name: 'चिकन करी | Chicken Curry', desc: 'Classic chicken curry', price: '₹130', tags: ['Non-Veg', 'Gravy'], img: 'img/chicken-curry.jpg'},
+{id: 47, cat: 'chikan chaynij', name: 'चिकन मसाला | Chicken Masala', desc: 'Spicy chicken masala', price: '₹150', tags: ['Non-Veg', 'Gravy'], img: 'img/chicken-masala.jpg'},
+{id: 48, cat: 'chikan chaynij', name: 'चिकन फ्राय | Chicken Fry', desc: 'Fried chicken with spices', price: '₹180', tags: ['Non-Veg', 'Dry'], img: 'img/chicken-fry.jpg'},
+{id: 49, cat: 'chikan chaynij', name: 'चिकन कोल्हापुरी | Chicken Kolhapuri', desc: 'Spicy Kolhapuri-style chicken', price: '₹210', tags: ['Non-Veg', 'Spicy'], img: 'img/chicken-kolhapuri.jpg'},
+{id: 50, cat: 'chikan chaynij', name: 'चिकन बोनलेस | Chicken Boneless', desc: 'Boneless chicken curry', price: '₹250', tags: ['Non-Veg', 'Gravy'], img: 'img/chicken-boneless.jpg'},
+{id: 51, cat: 'chikan chaynij', name: 'चिकन रस्सा | Chicken Rassa', desc: 'Spicy chicken curry soup', price: '₹45', tags: ['Non-Veg', 'Soup'], img: 'img/chicken-rassa.jpg'},
+ 
+// biryani
+{id: 52, cat: 'biryani', name: 'पनीर बिर्याणी | panir biryani', desc: 'Special Combination Platter (Details Not Specified)', price: '₹1100kg', tags: ['Combo', 'Thali'], img: 'img/pamir biryani.jpg'},
+{id: 52, cat: 'biryani', name: 'व्हेज बिर्याणी| veg biryani', desc: 'Special Combination Platter (Details Not Specified)', price: '₹750kg', tags: ['Combo', 'Thali'], img: 'img/veg biryani.jpg'},
+{id: 53, cat: 'biryani', name: 'मटन बिर्याणी |mutton biryani', desc: 'Special Combination Platter (Details Not Specified)', price: '₹1400', tags: ['Combo', 'Thali'], img: 'img/mutton biryani.jpg'},
+{id: 54, cat: 'biryani', name: 'चिकन बिर्याणी| chikan biryani', desc: 'Special Combination Platter (Details Not Specified)', price: '₹900', tags: ['Combo', 'Thali'], img: 'img/chikan biryani.jpg'},
+{id: 55, cat: 'biryani', name: 'कोलंबी बिर्याणी | kolambi biryani', desc: 'Special Combination Platter (Details Not Specified)', price: '₹950', tags: ['Combo', 'Thali'], img: 'img/kolambi biryani.jpg'},
+{id: 56, cat: 'biryani', name: 'मटन मसाला| mutton masala', desc: 'Special Combination Platter (Details Not Specified)', price: '₹900', tags: ['Combo', 'Thali'], img: 'img/mutton masala.jpg'},
+{id: 57, cat: 'biryani', name: 'चिकन मसाला| chikan masala', desc: 'Special Combination Platter (Details Not Specified)', price: '₹650', tags: ['Combo', 'Thali'], img: 'img/chikan masala.jpg'},
+
+   //maunsahari DISHES.
+      
+{id: 64, cat: 'maunsahari', name: 'मटण वडा थाळी | Mutton Vade Thali', desc: '4 Vade, Rice, Mutton Masala, Mutton Rassa, Solkadhi', price: '₹330', tags: ['Mutton', 'Thali'], img: 'img/mutton-vade-thali.jpg'},
+{id: 65, cat: 'maunsahari', name: 'मटण राईस थाळी | Mutton Rice Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Mutton Sukka, Mutton Rassa, Solkadhi', price: '₹290', tags: ['Mutton', 'Thali'], img: 'img/mutton-rice-thali.jpg'},
+{id: 66, cat: 'maunsahari', name: 'मटण स्पेशल राईस प्लेट | Mutton Special Rice Plate', desc: '2 Chapati OR 1 Bhakari, Mutton Kheema, Mutton Masala, Mutton Rassa Vati, Rice Vati, Solkadhi', price: '₹375', tags: ['Mutton', 'Special'], img: 'img/mutton-special-plate.jpg'},
+{id: 67, cat: 'maunsahari', name: 'चिकन वडा थाळी | Chicken Vade Thali', desc: '4 Vade, Rice, Chicken Masala, Chicken Rassa, Solkadhi Vati', price: '₹250', tags: ['Chicken', 'Thali'], img: 'img/chicken-vade-thali.jpg'},
+{id: 68, cat: 'maunsahari', name: 'चिकन राईस थाळी | Chicken Rice Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Chicken Sukka, Chicken Rassa, Solkadhi', price: '₹220', tags: ['Chicken', 'Thali'], img: 'img/chicken-rice-thali.jpg'},
+{id: 69, cat: 'maunsahari', name: 'चिकन स्पेशल राईस प्लेट | Chicken Special Rice Plate', desc: '2 Chapati OR 1 Bhakari, Boiled Egg, Chicken Sukka, Chicken Rassa Vati, Rice Vati, Solkadhi', price: '₹270', tags: ['Chicken', 'Special'], img: 'img/chicken-special-plate.jpg'},
+
+//veg
+// VEGETARIAN ITEMS (From last screenshot)
+{id: 91, cat: 'veg', name: 'तेल वांगी | Tel Vaange', desc: 'Fried brinjal in oil', price: '₹75', tags: ['Veg', 'Side'], img: 'img/tel-vaange.jpg'},
+{id: 92, cat: 'veg', name: 'शेव भाजी | Shev Bhaji', desc: 'Thin noodles in curry', price: '₹55', tags: ['Veg', 'Curry'], img: 'img/shev-bhaji.jpg'},
+{id: 93, cat: 'veg', name: 'लेसुणी मेथी | Lasuni Methi', desc: 'Garlic fenugreek leaves', price: '₹55', tags: ['Veg', 'Side'], img: 'img/lasuni-methi.jpg'},
+{id: 94, cat: 'veg', name: 'वेग कढाई | Veg Kadhai', desc: 'Mixed vegetables in kadhai', price: '₹215', tags: ['Veg', 'Main Course'], img: 'img/veg-kadhai.jpg'},
+{id: 95, cat: 'veg', name: 'डाल फ्राय तडका | Dal Fry Tadka', desc: 'Tempered lentil fry', price: 'H: ₹75, F: ₹130', tags: ['Veg', 'Dal'], img: 'img/dal-fry-tadka.jpg'},
+{id: 96, cat: 'veg', name: 'डाल फ्राय | Dal Fry', desc: 'Plain lentil fry', price: 'H: ₹60, F: ₹110', tags: ['Veg', 'Dal'], img: 'img/dal-fry.jpg'},
+{id: 97, cat: 'veg', name: 'वेग बिर्याणी | Veg Biryani', desc: 'Vegetable biryani', price: 'H: ₹90, F: ₹160', tags: ['Veg', 'Rice'], img: 'img/veg-biryani.jpg'},
+{id: 98, cat: 'veg', name: 'पनीर बिर्याणी | Paneer Biryani', desc: 'Paneer biryani', price: '₹190', tags: ['Veg', 'Rice'], img: 'img/paneer-biryani.jpg'},
+{id: 99, cat: 'veg', name: 'मटर पनीर पुलाव | Mutter Paneer Pulav', desc: 'Peas and paneer pulav', price: '₹175', tags: ['Veg', 'Rice'], img: 'img/mutter-paneer-pulav.jpg'},
+{id: 100, cat: 'veg', name: 'डाल खिचड़ी | Dal Khichadi', desc: 'Lentil and rice mixture', price: '₹90', tags: ['Veg', 'Rice'], img: 'img/dal-khichadi.jpg'},
+{id: 101, cat: 'veg', name: 'डाल खिचड़ी तडका | Dal Khichadi Tadka', desc: 'Tempered lentil-rice mixture', price: '₹100', tags: ['Veg', 'Rice'], img: 'img/dal-khichadi-tadka.jpg'},
+{id: 102, cat: 'veg', name: 'पनीर मसाला | Paneer Masala', desc: 'Paneer in spicy gravy', price: 'H: ₹125, F: ₹240', tags: ['Veg', 'Main Course'], img: 'img/paneer-masala.jpg'},
+{id: 103, cat: 'veg', name: 'सादा भात | Plain Rice', desc: 'Plain steamed rice', price: 'H: ₹30, F: ₹55', tags: ['Veg', 'Rice'], img: 'img/plain-rice.jpg'},
+{id: 104, cat: 'veg', name: 'भाजी वाटी | Bhaji Vati', desc: 'Vegetable curry bowl', price: '₹35', tags: ['Veg', 'Side'], img: 'img/bhaji-vati.jpg'},
+{id: 105, cat: 'veg', name: 'डाल वाटी | Dal Vati', desc: 'Lentil bowl', price: '₹35', tags: ['Veg', 'Side'], img: 'img/dal-vati.jpg'},
+{id: 106, cat: 'veg', name: 'उसळ वाटी | Usal Vati', desc: 'Sprouted curry bowl', price: '₹35', tags: ['Veg', 'Side'], img: 'img/usal-vati.jpg'},
+{id: 107, cat: 'veg', name: 'पापड (फ्राय/रोस्टेड) | Papad (Fried/Roasted)', desc: 'Crispy papad', price: '₹40', tags: ['Veg', 'Side'], img: 'img/papad.jpg'},
+{id: 108, cat: 'veg', name: 'काजू मसाला | Kaju Masala', desc: 'Cashew in gravy', price: '₹240', tags: ['Veg', 'Main Course'], img: 'img/kaju-masala.jpg'},
+{id: 109, cat: 'veg', name: 'पनीर कढाई | Paneer Kadhai', desc: 'Paneer in kadhai gravy', price: '₹230', tags: ['Veg', 'Main Course'], img: 'img/paneer-kadhai.jpg'},
+{id: 110, cat: 'veg', name: 'ग्रीन पीस मसाला | Green Peas Masala', desc: 'Green peas in gravy', price: 'H: ₹75, F: ₹130', tags: ['Veg', 'Main Course'], img: 'img/green-peas-masala.jpg'},
+{id: 111, cat: 'veg', name: 'आलू मटर | Aloo Mutter', desc: 'Potato and peas curry', price: 'H: ₹70, F: ₹130', tags: ['Veg', 'Main Course'], img: 'img/aloo-mutter.jpg'},
+{id: 112, cat: 'veg', name: 'मिक्स वेग | Mix Veg', desc: 'Mixed vegetable curry', price: 'H: ₹75, F: ₹150', tags: ['Veg', 'Main Course'], img: 'img/mix-veg.jpg'},
+{id: 113, cat: 'veg', name: 'वेग कोल्हापुरी | Veg Kolhapuri', desc: 'Spicy Kolhapuri vegetables', price: 'H: ₹120, F: ₹225', tags: ['Veg', 'Spicy'], img: 'img/veg-kolhapuri.jpg'},
+{id: 114, cat: 'veg', name: 'वेग हंडी | Veg Handi', desc: 'Vegetables in handi', price: '₹220', tags: ['Veg', 'Main Course'], img: 'img/veg-handi.jpg'},
+{id: 115, cat: 'veg', name: 'पनीर बटर मसाला | Paneer Butter Masala', desc: 'Paneer in buttery gravy', price: 'H: ₹110, F: ₹190', tags: ['Veg', 'Main Course'], img: 'img/paneer-butter-masala.jpg'},
+{id: 116, cat: 'veg', name: 'पनीर भुर्जी | Paneer Bhurji', desc: 'Scrambled paneer', price: 'H: ₹125, F: ₹240', tags: ['Veg', 'Main Course'], img: 'img/paneer-bhurji.jpg'},
+{id: 117, cat: 'veg', name: 'पनीर मख्खनवाला | Paneer Makhani', desc: 'Buttery paneer gravy', price: 'H: ₹110, F: ₹190', tags: ['Veg', 'Main Course'], img: 'img/paneer-makhani.jpg'},
+{id: 118, cat: 'veg', name: 'पनीर काजू मसाला | Paneer Kaju Masala', desc: 'Paneer and cashew in gravy', price: '₹240', tags: ['Veg', 'Main Course'], img: 'img/paneer-kaju-masala.jpg'},
+{id: 119, cat: 'veg', name: 'पनीर पंढर | Paneer Pandhara', desc: 'White paneer gravy', price: '₹230', tags: ['Veg', 'Main Course'], img: 'img/paneer-pandhara.jpg'},
+
+//bhojan
+// VEGETARIAN THALIS & COMBOS
+{id: 120, cat: 'bhojan', name: 'पोळी भाजी | Poli Bhaji', desc: '2 Poli/Chapati OR 1 Bhakari, Bhaji Vati, Koshimbir', price: '₹65', tags: ['Veg', 'Combo'], img: 'img/poli-bhaji.jpg'},
+{id: 121, cat: 'bhojan', name: 'मिनी थाळी | Mini Thali', desc: '2 Poli/Chapati OR 1 Bhakari, Bhaji Vati, Rice Vati, Dal Vati, Koshimbir', price: '₹95', tags: ['Veg', 'Thali'], img: 'img/mini-thali.jpg'},
+{id: 122, cat: 'bhojan', name: 'लिमिटेड वेग थाळी (रेग्युलर) | Limited Veg Thali (Regular)', desc: '2 Poli/Chapati OR 1 Bhakari, Bhaji Vati, Usal Vati, Rice Vati, Dal Vati, Taak/Solkadhi Vati, Papad, Lonche, Koshimbir', price: '₹130', tags: ['Veg', 'Thali'], img: 'img/limited-veg-thali.jpg'},
+{id: 123, cat: 'bhojan', name: 'स्पेशल राईस प्लेट | Special Rice Plate', desc: '2 Poli/Chapati OR 1 Bhakari, Punjabi Dish, Usal Vati, Dal Vati, Jeera Rice, Taak/Solkadhi Vati, Papad, Lonche, Koshimbir', price: '₹150', tags: ['Veg', 'Special'], img: 'img/special-rice-plate.jpg'},
+{id: 124, cat: 'bhojan', name: 'आमंत्रण स्पेशल राईस प्लेट | Amantran Special Rice Plate', desc: '2 Poli/Chapati OR 1 Bhakari, 2 Punjabi Dishes, Usal Vati, Dal Vati, Jeera Rice, Taak/Solkadhi Vati, Papad, Lonche, Koshimbir, Sweet Dish', price: '₹180', tags: ['Veg', 'Special'], img: 'img/amantran-special.jpg'},
+{id: 125, cat: 'bhojan', name: 'वांग भाकरी | Vang Bhakari', desc: 'Masala Vaang, 2 Tandul Bhakari, Lonche, Koshimbir', price: '₹115', tags: ['Veg', 'Combo'], img: 'img/vang-bhakari.jpg'},
+{id: 126, cat: 'bhojan', name: 'झुणका/पिटळे भाकरी | Jhunka/Pitale Bhakari', desc: 'Jhunka, 2 Tandul Bhakari, Mirchi Kharda/Lonche', price: '₹95', tags: ['Veg', 'Combo'], img: 'img/jhunka-bhakari.jpg'},
+
+//alpohar
+// SNACKS & PAV ITEMS
+{id: 127, cat: 'alpohar', name: 'दही बटाटा वडा (सिंगल) | Dahi Batata Vada (Single)', desc: 'Curd with potato vada', price: '₹25', tags: ['Veg', 'Snack'], img: 'img/dahi-batata-vada.jpg'},
+{id: 128, cat: 'alpohar', name: 'दही बटाटा वडा (डबल) | Dahi Batata Vada (Double)', desc: 'Double portion of curd with potato vada', price: '₹50', tags: ['Veg', 'Snack'], img: 'img/dahi-batata-vada-double.jpg'},
+{id: 129, cat: 'alpohar', name: 'रस्सा वडा (सिंगल, पाव शिवाय) | Rassavada (Single, Without Pav)', desc: 'Spicy vada in gravy without bread', price: '₹40', tags: ['Veg', 'Snack'], img: 'img/rassavada-single.jpg'},
+{id: 130, cat: 'alpohar', name: 'रस्सा वडा (डबल, पाव शिवाय) | Rassavada (Double, Without Pav)', desc: 'Double vada in gravy without bread', price: '₹45', tags: ['Veg', 'Snack'], img: 'img/rassavada-double.jpg'},
+{id: 131, cat: 'alpohar', name: 'रस्सा वडा (सिंगल, १ पाव) | Rassavada (Single, 1 Pav)', desc: 'Single vada in gravy with 1 bread', price: '₹???', tags: ['Veg', 'Snack'], img: 'img/rassavada-single-1pav.jpg'},
+{id: 132, cat: 'alpohar', name: 'रस्सा वडा (सिंगल, २ पाव) | Rassavada (Single, 2 Pav)', desc: 'Single vada in gravy with 2 bread', price: '₹50', tags: ['Veg', 'Snack'], img: 'img/rassavada-single-2pav.jpg'},
+{id: 133, cat: 'alpohar', name: 'रस्सा वडा (डबल, १ पाव) | Rassavada (Double, 1 Pav)', desc: 'Double vada in gravy with 1 bread', price: '₹55', tags: ['Veg', 'Snack'], img: 'img/rassavada-double-1pav.jpg'},
+{id: 134, cat: 'alpohar', name: 'रस्सा वडा (डबल, २ पाव) | Rassavada (Double, 2 Pav)', desc: 'Double vada in gravy with 2 bread', price: '₹60', tags: ['Veg', 'Snack'], img: 'img/rassavada-double-2pav.jpg'},
+{id: 135, cat: 'alpohar', name: 'थालीपीठ (सिंगल) | Thalipeeth (Single)', desc: 'Traditional multigrain flatbread', price: '₹40', tags: ['Veg', 'Snack'], img: 'img/thalipeeth-single.jpg'},
+{id: 136, cat: 'alpohar', name: 'थालीपीठ (डबल) | Thalipeeth (Double)', desc: 'Double portion of thalipeeth', price: '₹80', tags: ['Veg', 'Snack'], img: 'img/thalipeeth-double.jpg'},
+{id: 137, cat: 'alpohar', name: 'बटर पाव (सिंगल) | Butter Pav (Single)', desc: 'Buttered bread', price: '₹30', tags: ['Veg', 'Bread'], img: 'img/butter-pav-single.jpg'},
+{id: 138, cat: 'alpohar', name: 'बटर पाव (डबल) | Butter Pav (Double)', desc: 'Double buttered bread', price: '₹40', tags: ['Veg', 'Bread'], img: 'img/butter-pav-double.jpg'},
+{id: 139, cat: 'alpohar', name: 'बटर पाव (स्पेशल) | Butter Pav (Special)', desc: 'Special buttered bread', price: '₹45', tags: ['Veg', 'Bread'], img: 'img/butter-pav-special.jpg'},
+{id: 140, cat: 'alpohar', name: 'बटर पाव (प्रीमियम) | Butter Pav (Premium)', desc: 'Premium buttered bread', price: '₹65', tags: ['Veg', 'Bread'], img: 'img/butter-pav-premium.jpg'},
+// BREAKFAST & SNACK ITEMS
+{id: 141, cat: 'breakfast', name: 'कांदा पोहे | Kanda Pohe', desc: 'Flattened rice with onions and spices', price: '₹35', tags: ['Veg', 'Breakfast'], img: 'img/kanda-pohe.jpg'},
+{id: 142, cat: 'breakfast', name: 'उपीठ/उपमा | Upeeth/Upma', desc: 'Savory semolina dish', price: '₹40', tags: ['Veg', 'Breakfast'], img: 'img/upma.jpg'},
+{id: 143, cat: 'breakfast', name: 'शिरा | Shira', desc: 'Sweet semolina pudding', price: '₹50', tags: ['Veg', 'Breakfast', 'Sweet'], img: 'img/shira.jpg'},
+{id: 144, cat: 'breakfast', name: 'कांदा पोहे उपमा मिक्स | Kanda Pohe Upma Mix', desc: 'Mix of poha and upma', price: '₹50', tags: ['Veg', 'Breakfast'], img: 'img/pohe-upma-mix.jpg'},
+{id: 145, cat: 'breakfast', name: 'उपमा शिरा मिक्स | Upma Shira Mix', desc: 'Mix of upma and shira', price: '₹50', tags: ['Veg', 'Breakfast', 'Sweet'], img: 'img/upma-shira-mix.jpg'},
+{id: 146, cat: 'breakfast', name: 'उसळ पाव | Usal Pav', desc: 'Spicy curry with bread', price: '₹45', tags: ['Veg', 'Breakfast'], img: 'img/usal-pav.jpg'},
+{id: 147, cat: 'breakfast', name: 'मिसळ | Misal', desc: 'Spicy sprouted curry', price: '₹50', tags: ['Veg', 'Breakfast'], img: 'img/misal.jpg'},
+{id: 148, cat: 'breakfast', name: 'मिसळ पाव (२) | Misal Pav (2)', desc: 'Misal with 2 bread pieces', price: '₹60', tags: ['Veg', 'Breakfast'], img: 'img/misal-pav.jpg'},
+{id: 149, cat: 'breakfast', name: 'दही मिसळ | Dahi Misal', desc: 'Misal with yogurt', price: '₹70', tags: ['Veg', 'Breakfast'], img: 'img/dahi-misal.jpg'},
+{id: 150, cat: 'breakfast', name: 'पुरी भाजी (सुकी) | Puri Bhaji (Suki)', desc: 'Fried bread with dry vegetable', price: '₹65', tags: ['Veg', 'Breakfast'], img: 'img/puri-bhaji.jpg'},
+{id: 151, cat: 'breakfast', name: 'पुरी भाजी मिक्स | Puri Bhaji Mix', desc: 'Puri with mixed vegetables', price: '₹75', tags: ['Veg', 'Breakfast'], img: 'img/puri-bhaji-mix.jpg'},
+{id: 152, cat: 'breakfast', name: 'पुरी प्लेट | Puri Plate', desc: 'Plate of puri', price: '₹40', tags: ['Veg', 'Breakfast'], img: 'img/puri-plate.jpg'},
+{id: 153, cat: 'breakfast', name: 'कांदा भजी | Kanda Bhaji', desc: 'Onion fritters', price: '₹40', tags: ['Veg', 'Snack'], img: 'img/kanda-bhaji.jpg'},
+{id: 154, cat: 'breakfast', name: 'कांदा गोल भजी | Kanda Gol Bhaji', desc: 'Round onion fritters', price: '₹40', tags: ['Veg', 'Snack'], img: 'img/kanda-gol-bhaji.jpg'},
+{id: 155, cat: 'breakfast', name: 'बटाटा भजी | Batata Bhaji', desc: 'Potato fritters', price: '₹35', tags: ['Veg', 'Snack'], img: 'img/batata-bhaji.jpg'},
+{id: 156, cat: 'breakfast', name: 'ब्रेड पाटीस | Bread Patis', desc: 'Bread slices', price: '₹25', tags: ['Veg', 'Snack'], img: 'img/bread-patis.jpg'},
+{id: 157, cat: 'breakfast', name: 'वडापाव | Vadapav', desc: 'Fried potato dumpling in bread', price: '₹18', tags: ['Veg', 'Snack'], img: 'img/vadapav.jpg'},
+{id: 158, cat: 'breakfast', name: 'समोसा | Samosa', desc: 'Fried pastry with filling', price: '₹20', tags: ['Veg', 'Snack'], img: 'img/samosa.jpg'},
+{id: 159, cat: 'breakfast', name: 'बटाटा वडा (सिंगल) | Batata Vada (Single)', desc: 'Single potato dumpling', price: '₹15', tags: ['Veg', 'Snack'], img: 'img/batata-vada-single.jpg'},
+{id: 160, cat: 'breakfast', name: 'बटाटा वडा (डबल) | Batata Vada (Double)', desc: 'Double potato dumpling', price: '₹30', tags: ['Veg', 'Snack'], img: 'img/batata-vada-double.jpg'},
+{id: 161, cat: 'breakfast', name: 'दही वडा (सिंगल) | Dahi Vada (Single)', desc: 'Single dumpling in yogurt', price: '₹30', tags: ['Veg', 'Snack'], img: 'img/dahi-vada-single.jpg'},
+{id: 162, cat: 'breakfast', name: 'दही वडा (डबल) | Dahi Vada (Double)', desc: 'Double dumpling in yogurt', price: '₹55', tags: ['Veg', 'Snack'], img: 'img/dahi-vada-double.jpg'},
+
+//upavsache padartha
+// UPVAS/FASTING SPECIAL ITEMS
+{id: 163, cat: 'upavas', name: 'साबुदाणा खिचडी | Sabudana Khichadi', desc: 'Tapioca pearls cooked with peanuts and spices (Fasting Special)', price: '₹45', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/sabudana-khichadi.jpg'},
+{id: 164, cat: 'upavas', name: 'साबुदाणा वडा | Sabudana Vada', desc: 'Tapioca pearl fritters (Fasting Special)', price: '₹50', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/sabudana-vada.jpg'},
+{id: 165, cat: 'upavas', name: 'साबुदाणा थालीपीठ | Sabudana Thalipeeth', desc: 'Tapioca pearl multigrain flatbread (Fasting Special)', price: '₹80', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/sabudana-thalipeeth.jpg'},
+{id: 166, cat: 'upavas', name: 'फ्रेंच फ्रायस | French Fries', desc: 'Potato fries (Fasting Special)', price: '₹80', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/french-fries.jpg'},
+{id: 167, cat: 'upavas', name: 'उपवास भजणी थालीपीठ | Upvas Bhajani Thalipeeth', desc: 'Fasting special multigrain flatbread', price: '₹75', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/upvas-thalipeeth.jpg'},
+{id: 168, cat: 'upavas', name: 'उपवास मिसळ | Upvas Misal', desc: 'Fasting special sprouted curry', price: '₹85', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/upvas-misal.jpg'},
+
+
+
+
+
+
+        // // SEAFOOD DISHES
+        // {id:1,cat:'seafood',name:'फिश फ्राय • Fish Fry',desc:'Crispy fried fish',price:'₹220',tags:['Crispy'],img:'img/fish fry.jpg'},
+        // {id:2,cat:'seafood',name:'प rawns मसाला • Prawns Masala',desc:'Spicy prawns masala',price:'₹300',tags:['Spicy'],img:'img/prawns masala.jpg'},
+        // {id:3,cat:'seafood',name:'फिश करी • Fish Curry',desc:'Traditional fish curry',price:'₹200',tags:['Curry'],img:'img/fish curry.jpg'},
+        // {id:4,cat:'seafood',name:'फिश बिर्याणी • Fish Biryani',desc:'Aromatic fish biryani',price:'₹250',tags:['Biryani'],img:'img/fish biryani.jpg'},
+
+
+        // // EGG DISHES
+        // {id:1,cat:'egg',name:'अंडा करी • Egg Curry',desc:'Traditional egg curry',price:'₹100',tags:['Curry'],img:'img/egg curry.jpg'},
+        // {id:2,cat:'egg',name:'अंडा भुर्जी • Egg Bhurji',desc:'Spicy scrambled eggs',price:'₹90',tags:['Spicy'],img:'img/egg bhurji.jpg'},
+        // {id:3,cat:'egg',name:'अंडा फ्राय • Egg Fry',desc:'Crispy fried eggs',price:'₹80',tags:['Crispy'],img:'img/egg fry.jpg'},
+
+
+
+        // // BIRYANI DISHES
+        // {id:1,cat:'biryani',name:'व्हेज बिर्याणी • Veg Biryani',desc:'Aromatic veg biryani',price:'₹180',tags:['Biryani'],img:'img/veg biryani.jpg'},
+        // {id:2,cat:'biryani',name:'एग बिर्याणी • Egg Biryani',desc:'Aromatic egg biryani',price:'₹200',tags:['Biryani'],img:'img/egg biryani.jpg'},
+
+
+        // // INDO-CHINESE DISHES
+        // {id:1,cat:'indochinese',name:'चिकन मंचूरियन • Chicken Manchurian',desc:'Spicy chicken manchurian',price:'₹220',tags:['Spicy'],img:'img/chicken manchurian.jpg'},
+        // {id:2,cat:'indochinese',name:'व्हेज मंचूरियन • Veg Manchurian',desc:'Spicy veg manchurian',price:'₹180',tags:['Spicy'],img:'img/veg manchurian.jpg'},
+
+
+
+        // // STARTERS
+        // {id:1,cat:'starters',name:'चिकन लोल्लीपॉप • Chicken Lollipop',desc:'Crispy chicken lollipop',price:'₹250',tags:['Crispy'],img:'img/chicken lollipop.jpg'},
+        // {id:2,cat:'starters',name:'प rawns लोल्लीपॉप • Prawns Lollipop',desc:'Crispy prawns lollipop',price:'₹300',tags:['Crispy'],img:'img/prawns lollipop.jpg'},
+
+
+        // // THALI
+        // {id:1,cat:'thali',name:'व्हेज थाळी • Veg Thali',desc:'Assorted veg dishes with rice and bread',price:'₹150',tags:['Meal'],img:'img/veg thali.jpg'},
+        // {id:2,cat:'thali',name:'चिकन थाळी • Chicken Thali',desc:'Assorted chicken dishes with rice and bread',price:'₹250',tags:['Meal'],img:'img/chicken thali.jpg'},
+        // {id:3,cat:'thali',name:'मटण थाळी • Mutton Thali',desc:'Assorted mutton dishes with rice and bread',price:'₹300',tags:['Meal'],img:'img/mutton thali.jpg'},
+
+
+        // // VEG DISHES
+        // {id:1,cat:'veg',name:'पनीर बटर मसाला • Paneer Butter Masala',desc:'Creamy paneer in butter masala',price:'₹180',tags:['Creamy'],img:'img/paneer butter masala.jpg'},
+        // {id:2,cat:'veg',name:'मिश्र भाजी • Mixed Vegetable',desc:'Assorted mixed vegetables',price:'₹150',tags:['Healthy'],img:'img/mixed vegetable.jpg'},
+        // {id:3,cat:'veg',name:'डाळ तड़का • Dal Tadka',desc:'Spiced lentil curry',price:'₹120',tags:['Spicy'],img:'img/dal tadka.jpg'},
+        // {id:4,cat:'veg',name:'भिंडी मसाला • Bhindi Masala',desc:'Spicy okra curry',price:'₹140',tags:['Spicy'],img:'img/bhindi masala.jpg'},
+        // {id:5,cat:'veg',name:'मसाला भात • Masala Rice',desc:'Spiced rice with vegetables',price:'₹130',tags:['Spiced'],img:'img/masala rice.jpg'},
+        // {id:6,cat:'veg',name:'वेज पुलाव • Veg Pulao',desc:'Aromatic vegetable pulao',price:'₹150',tags:['Aromatic'],img:'img/veg pulao.jpg'},
+        // {id:7,cat:'veg',name:'चपाती (२) • Chapati (2)',desc:'Two whole wheat chapatis',price:'₹30',tags:['Bread'],img:'img/chapati.jpg'},
+        // {id:8,cat:'veg',name:'बटर नान • Butter Naan',desc:'Soft butter naan',price:'₹40',tags:['Bread'],img:'img/butter naan.jpg'},
+        // {id:9,cat:'veg',name:'तंदूरी रोटी • Tandoori Roti',desc:'Whole wheat tandoori roti',price:'₹35',tags:['Bread'],img:'img/tandoori roti.jpg'},
+
+
+
+
+
+
+
+
+
+
+ ];
 
     // Cart functionality
     let cart = [];
@@ -981,4 +1192,5 @@
     }));
   </script>
 </body>
+
 </html>
