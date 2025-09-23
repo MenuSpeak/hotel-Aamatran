@@ -6,29 +6,6 @@
   <title>Amantran Restaurant - Menu with Cart</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-
-    body{
-  margin: 0;
-  min-height: 100vh;
-  color: #e8e6e3;
-  font-family: var(--ff-ui);
-  -webkit-font-smoothing: antialiased;
-  padding: 32px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-}
-
-/* Background image with opacity */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url("bg.jpg") center/cover no-repeat;
-  opacity: 0.5;
-  z-index: -1; /* behind everything */
-}
     body {
       margin: 0;
       min-height: 100vh;
@@ -46,8 +23,8 @@ body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: url("bg.jpeg") center/cover no-repeat;
-      opacity: 0.1;
+      background: url("bg.jpg") center/cover no-repeat;
+      opacity: 0.2;
       z-index: -1;
     }
 
@@ -71,17 +48,19 @@ body::before {
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
-      margin: 0;
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(212,175,55,0.06), transparent 6%),
-                  radial-gradient(1000px 500px at 95% 90%, rgba(255,204,102,0.04), transparent 8%),
-                  var(--bg);
-      color: #e8e6e3;
-      font-family: var(--ff-ui);
-      -webkit-font-smoothing: antialiased;
-      padding: 32px;
-      display: flex;
-      justify-content: center;
-    }
+  margin: 0;
+  background: 
+    radial-gradient(1200px 600px at 10% 10%, rgba(212,175,55,0.06), transparent 6%),
+    radial-gradient(1000px 500px at 95% 90%, rgba(255,204,102,0.04), transparent 8%),
+    url("bg.jpeg") center/cover no-repeat,
+    var(--bg);
+  color: #e8e6e3;
+  font-family: var(--ff-ui);
+  -webkit-font-smoothing: antialiased;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
 
     .container {
       width: 100%;
@@ -596,7 +575,7 @@ body::before {
     <main class="menu">
       <div class="menu-head">
         <div>
-          <h2 class="title">अमंत्रण रेस्टोरेंट</h2>
+          <h2 class="title">हॉटेल आमंत्रण </h2>
           <div class="subtitle">शाकाहारी • मांसाहारी • Vegetarian • Non-Veg — Traditional Maharashtrian dishes</div>
           <div class="gold-line"></div>
         </div>
@@ -736,7 +715,7 @@ body::before {
         //mastyahari DISHES
 
         // NON-VEG THALI
-{id: 1, cat: 'thali', name: 'फियर स्टार थाळी | Fear Star Thali (Chicken Special)', desc: '2 Chapati OR 1 Bhakari, Boiled Egg, Chicken Sukka, Chicken Rassa Vati, Rice Vati, Solkadhi', price: '₹???', tags: ['Non-Veg', 'Combo'], img: 'img/fear-star-thali.jpg'},
+//{id: 1, cat: 'thali', name: 'फियर स्टार थाळी | Fear Star Thali (Chicken Special)', desc: '2 Chapati OR 1 Bhakari, Boiled Egg, Chicken Sukka, Chicken Rassa Vati, Rice Vati, Solkadhi', price: '₹???', tags: ['Non-Veg', 'Combo'], img: 'img/fear.jpg'},
 
 // MASTYAHARI THALI
 {id: 2, cat: 'mastyahari', name: 'सुरमाई फ्राय थाळी | Surmai Fry Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Surmai Fry, Rassa, Solkadhi Vati', price: '₹550', tags: ['Seafood', 'Fry'], img: 'img/surmai-thali.jpg'},
@@ -1215,7 +1194,4 @@ body::before {
     }));
   </script>
 </body>
-
 </html>
-
-
