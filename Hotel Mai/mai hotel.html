@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>हॉटेल माई – मेनू</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(90deg, #a8892d, #d4af37);
+      color: #121212;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1c1c1c;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    section {
+      padding: 2rem;
+    }
+    h2 {
+      color: #d4af37;
+      border-bottom: 1px solid #d4af37;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+    .price {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #d4af37;
+    }
+  </style>
+</head>
+<body>
+  <header>हॉटेल माई – बार अँड रेस्टॉरंट</header>
+
+  <nav>
+    <a href="#starters">स्टार्टर</a>
+    <a href="#main">मेन कोर्स</a>
+    <a href="#rice">भात</a>
+    <a href="#chinese">चायनीज</a>
+    <a href="#drinks">पेय पदार्थ</a>
+  </nav>
+
+  <section id="starters">
+    <h2>स्टार्टर</h2>
+    <div class="menu-grid">
+      <div class="card">फ्राय मसाला<div class="price">₹150</div></div>
+      <div class="card">अंडा करी<div class="price">₹100</div></div>
+      <div class="card">मटण मसाला<div class="price">₹170</div></div>
+      <div class="card">चिकन मसाला<div class="price">₹160</div></div>
+      <div class="card">फ्राय चिकन मसाला<div class="price">₹170</div></div>
+      <div class="card">फ्राय मटण<div class="price">₹180</div></div>
+      <div class="card">मटण झुर्रा<div class="price">₹160</div></div>
+    </div>
+  </section>
+
+  <section id="main">
+    <h2>मेन कोर्स</h2>
+    <div class="menu-grid">
+      <div class="card">पनीर तवा<div class="price">₹120</div></div>
+      <div class="card">व्हेज मसाला<div class="price">₹110</div></div>
+      <div class="card">आलू मसाला<div class="price">₹100</div></div>
+      <div class="card">भेंडी मसाला<div class="price">₹110</div></div>
+      <div class="card">मटण मसाला<div class="price">₹190</div></div>
+      <div class="card">अंडा मसाला<div class="price">₹120</div></div>
+      <div class="card">चिकन मसाला<div class="price">₹190</div></div>
+      <div class="card">बटर चिकन<div class="price">₹150</div></div>
+      <div class="card">पनीर मसाला<div class="price">₹150</div></div>
+      <div class="card">कांदा भजी<div class="price">₹130</div></div>
+      <div class="card">बंगला मसाला<div class="price">₹190</div></div>
+      <div class="card">फिश मसाला<div class="price">₹170</div></div>
+      <div class="card">शेवंता मसाला<div class="price">₹110</div></div>
+      <div class="card">सोयाबीन मसाला<div class="price">₹190</div></div>
+      <div class="card">मटण कोल्हापुरी<div class="price">₹150</div></div>
+      <div class="card">पनीर हंडी मसाला<div class="price">₹170</div></div>
+      <div class="card">सोयाबीन हंडी मसाला<div class="price">₹180</div></div>
+      <div class="card">व्हेज पनीर<div class="price">₹80</div></div>
+      <div class="card">गुप्ता स्पेशल<div class="price">₹130</div></div>
+      <div class="card">तंदुरी रोटी<div class="price">₹30</div></div>
+    </div>
+  </section>
+
+  <section id="rice">
+    <h2>भात</h2>
+    <div class="menu-grid">
+      <div class="card">पांढरा भात<div class="price">₹40</div></div>
+      <div class="card">जीरा राईस<div class="price">₹70</div></div>
+      <div class="card">फ्राय राईस<div class="price">₹120</div></div>
+      <div class="card">व्हेज पुलाव<div class="price">₹150</div></div>
+      <div class="card">बिर्याणी<div class="price">₹150</div></div>
+      <div class="card">फ्राय बिर्याणी<div class="price">₹150</div></div>
+      <div class="card">मटण बिर्याणी<div class="price">₹160</div></div>
+    </div>
+  </section>
+
+  <section id="chinese">
+    <h2>चायनीज</h2>
+    <div class="menu-grid">
+      <div class="card">व्हेज मंचूरियन<div class="price">₹100</div></div>
+      <div class="card">फ्राय मंचूरियन<div class="price">₹120</div></div>
+      <div class="card">व्हेज नूडल्स<div class="price">₹110</div></div>
+      <div class="card">फ्राय नूडल्स<div class="price">₹130</div></div>
+    </div>
+  </section>
+
+  <section id="drinks">
+    <h2>पेय पदार्थ</h2>
+    <div class="menu-grid">
+      <div class="card">लिंबू सरबत<div class="price">₹25</div></div>
+      <div class="card">मसाला ताक<div class="price">₹20</div></div>
+      <div class="card">बॉटल पाणी<div class="price">₹20</div></div>
+    </div>
+  </section>
+
+</body>
+</html>

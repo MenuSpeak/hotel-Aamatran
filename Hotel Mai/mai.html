@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Mai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --surface:#0f1114;
+      --muted:#9aa0a6;
+      --gold1:#d4af37;
+      --gold2:#ffcc66;
+      --accent: linear-gradient(90deg,var(--gold1),var(--gold2));
+      --glass: rgba(255,255,255,0.03);
+      --card-radius:16px;
+      --shadow: 0 10px 30px rgba(2,6,23,0.6);
+      --glass-strong: rgba(255,255,255,0.04);
+      --maxw:1200px;
+      --gap:20px;
+      --ff-heading: 'Playfair Display', serif;
+      --ff-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:radial-gradient(1200px 600px at 10% 10%, rgba(212,175,55,0.06), transparent 6%),
+                      radial-gradient(1000px 500px at 95% 90%, rgba(255,204,102,0.04), transparent 8%),
+                      var(--bg);
+      color:#e8e6e3;font-family:var(--ff-ui);-webkit-font-smoothing:antialiased;padding:32px;display:flex;justify-content:center;
+    }
+
+    .container{width:100%;max-width:var(--maxw);display:grid;grid-template-columns:380px 1fr;gap:var(--gap);align-items:start}
+
+    /* LEFT - Cover */
+    .cover{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--card-radius);padding:28px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03);
+      position:relative;overflow:hidden;
+    }
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{
+      width:86px;height:86px;border-radius:14px;background:linear-gradient(135deg,var(--gold1),var(--gold2));display:flex;align-items:center;justify-content:center;color:#0b0b0d;font-family:var(--ff-heading);font-size:28px;font-weight:700;box-shadow:0 6px 22px rgba(212,175,55,0.12)
+    }
+    .brand h1{margin:0;font-family:var(--ff-heading);font-size:22px;letter-spacing:0.6px}
+    .brand p{margin:2px 0 0 0;color:var(--muted);font-size:13px}
+
+    .cover-hero{margin-top:18px;border-radius:12px;overflow:hidden;height:260px;background:linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5));display:flex;align-items:end}
+    .cover-hero img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.03);filter:contrast(1.05) saturate(1.05)}
+    .cover-hero .overlay{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay}
+
+    .cover-meta{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+    .badge{background:linear-gradient(90deg,rgba(212,175,55,0.12),rgba(255,204,102,0.06));padding:8px 12px;border-radius:999px;font-size:13px;color:var(--gold2);border:1px solid rgba(212,175,55,0.09)}
+
+    /* RIGHT - Menu */
+    .menu{
+      display:flex;flex-direction:column;gap:18px;
+    }
+    .menu-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+    .title{font-family:var(--ff-heading);font-size:28px;margin:0}
+    .subtitle{color:var(--muted);font-size:14px;margin-top:6px}
+
+    .controls{display:flex;gap:12px;align-items:center}
+    .search{
+      background:var(--glass);backdrop-filter:blur(6px);padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:10px;align-items:center;min-width:300px
+    }
+    .search input{background:transparent;border:0;outline:0;color:inherit;font-size:14px;width:100%}
+
+    .tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .tab{padding:8px 14px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.03);font-size:13px;color:var(--muted);cursor:pointer}
+    .tab.active{background:var(--accent);color:#0b0b0d;border:none;box-shadow:0 8px 30px rgba(212,175,55,0.12)}
+
+    .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border-radius:12px;padding:14px;display:flex;gap:14px;align-items:start;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 24px rgba(2,6,23,0.6);transition:transform .28s cubic-bezier(.2,.9,.2,1),box-shadow .28s}
+    .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(2,6,23,0.7)}
+
+    .thumb{width:120px;height:96px;border-radius:10px;overflow:hidden;flex-shrink:0;border:1px solid rgba(255,255,255,0.03)}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+    .card:hover .thumb img{transform:scale(1.06)}
+
+    .info{flex:1}
+    .dish{font-size:16px;font-weight:600;margin:0;font-family:var(--ff-heading)}
+    .desc{color:var(--muted);font-size:13px;margin-top:6px}
+    .meta-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+    .price{font-weight:700;font-size:16px;color:var(--gold2)}
+    .tags{display:flex;gap:8px}
+    .pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);font-size:12px;color:var(--muted);background:transparent}
+
+    /* CTA area */
+    .cta-row{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+    .btn-primary{background:linear-gradient(90deg,var(--gold1),var(--gold2));border:none;padding:12px 18px;border-radius:12px;color:#0b0b0d;font-weight:700;cursor:pointer;box-shadow:0 8px 30px rgba(212,175,55,0.12)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:12px;color:var(--muted);cursor:pointer}
+
+    /* small screen */
+    @media (max-width:980px){
+      .container{grid-template-columns:1fr;}
+      .menu-grid{grid-template-columns:1fr}
+      .thumb{width:90px;height:70px}
+      .search{min-width:unset;width:100%}
+    }
+
+    /* subtle animated gradient line */
+    .gold-line{height:4px;border-radius:999px;background:linear-gradient(90deg,var(--gold1),var(--gold2));box-shadow:0 8px 30px rgba(212,175,55,0.08);margin-top:6px}
+
+    /* print */
+    @media print{body{background:white;color:black} .cover-hero, .controls{display:none}}
+  </style>
+</head>
+<body>
+<!--   <div class="container">
+    <aside class="cover">
+      <div class="brand">
+        <div class="logo">M</div>
+        <div>
+          <h1>महाराष्ट्रीय स्वाद • Maharashtriya Swad</h1>
+          <p>Authentic Maharashtrian cuisine • Family restaurant since 1995</p>
+        </div>
+      </div>
+
+      <div class="cover-hero" style="margin-top:12px;position:relative;">
+        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="hero" />
+        <div class="overlay"></div>
+      </div>
+
+      <div class="cover-meta">
+        <div>
+          <div style="font-size:13px;color:var(--muted)">Open</div>
+          <div style="font-weight:700">11:00 AM — 11:00 PM</div>
+        </div>
+        <div style="text-align:right">
+          <div class="badge">Authentic Taste</div>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px">Established 1995</div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;color:var(--muted);font-size:13px;line-height:1.5">Experience the authentic flavors of Maharashtra with our traditional recipes passed down through generations. Every dish tells a story of our rich culinary heritage.</div>
+    </aside>
+ -->
+    <main class="menu">
+      <div class="menu-head">
+        <div>
+          <h2 class="title">हॉटेल माई </h2>
+          <div class="subtitle">शाकाहारी • Vegetarian — Traditional Maharashtrian dishes</div>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="controls">
+          <div class="search" role="search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M21 21l-4.35-4.35" stroke="rgba(255,255,255,0.6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="11" cy="11" r="6" stroke="rgba(255,255,255,0.6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></circle>
+            </svg>
+            <input id="search" placeholder="Search dishes, ingredients..." />
+          </div>
+
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-cat="all">All</button>
+            <button class="tab" data-cat="mains">Main Course</button>
+            <button class="tab" data-cat="starters">Starters</button>
+            <button class="tab" data-cat="beverages">Beverages</button>
+            <button class="tab" data-cat="breads">Breads</button>
+            <button class="tab" data-cat="drinks">Drinks</button>
+             <button class="tab" data-cat="non veg">non veg</button>
+
+          </div>
+        </div>
+      </div>
+
+      <section class="menu-grid" id="menuGrid">
+        <!-- Cards injected by JS -->
+      </section>
+
+      <div style="display:flex;justify-content:flex-end;margin-top:6px">
+        <button class="btn-ghost" onclick="window.print()">Print Menu</button>
+      </div>
+    </main>    
+  </div>
+
+  <script>
+    const data = [
+
+      
+
+      {id:1,cat:'starters',name:'मिसळ पाव • Misal Pav',desc:'Spicy sprouted lentils curry served with pav',price:'₹120',tags:['Spicy','Popular'],img:'img/MISALPAV.png'},
+      {id:2,cat:'starters',name:'वडा पाव • Vada Pav',desc:'Spicy potato fritter in bun with chutneys',price:'₹40',tags:['Street Food','Snack'],img:'img/vadapav.jpg'},
+      {id:3,cat:'starters',name:'पोहा • Poha',desc:'Flattened rice with onions, peanuts and spices',price:'₹60',tags:['Breakfast','Light'],img:'img/poha.jpg'},
+      {id:4,cat:'mains',name:'दाल तडका • Dal Tadka',desc:' ',price:'₹90',tags:['Sweet','Traditional'],img:'img/daltadka.jpg'},
+      {id:5,cat:'mains',name:'दाल फ्राय • dal fray',desc:' ',price:'₹110',tags:['Spicy','Gluten-free'],img:' img/dal fray.jpg'},
+       {id:6,cat:'mains',name:'आलू मटर • aloo matar',desc:' ',price:'₹110',tags:['Spicy','Gluten-free'],img:'img/aloo matar.jpg'},
+      {id:7,cat:'mains',name:' शेवभाजी •shev Bhajii',desc:' ',price:'₹110',tags:['spicy','Gluten-free'],img:'img/shev bhaji.jpg'},
+       {id:8,cat:'mains',name:' भेंडी मसाला •bhendi masala',desc:' ',price:'₹130',tags:['spicy','Gluten-free'],img:'img/bhendi masala.jpg'},
+      {id:9,cat:'mains',name:' भेंडी फ्राय •bhendi fray',desc:' ',price:'₹110',tags:['spicy','Gluten-free'],img:'img/bhendi fray.jpg'},
+      {id:10,cat:'mains',name:' मटकी मसाला •mataki masala',desc:' ',price:'₹110',tags:['spicy','Gluten-free'],img:'img/mataki masala.jpg'},
+      {id:11,cat:'mains',name:' पनीर मसाला •panir masala',desc:' ',price:'₹150',tags:['spicy','Gluten-free'],img:'img/panir masala.jpg'},
+      {id:12,cat:'mains',name:' काजू कैरी •kaju kairi',desc:' ',price:'₹150',tags:['spicy','Gluten-free'],img:'img/kaju kairi.jpg'},
+      {id:13,cat:'mains',name:' आलू पनीर •aloo panir',desc:' ',price:'₹150',tags:['spicy','Gluten-free'],img:'img/aloo panir.jpg'},
+      {id:14,cat:'mains',name:' ग्रीनपीस मसाला •grinpis masala',desc:' ',price:'₹130',tags:['spicy','Gluten -free'],img:'img/grinpis masala.jpg'},
+      {id:15,cat:'mains',name:' मिक्स वेज •mix veg',desc:' ',price:'₹170',tags:['spicy','Gluten -free'],img:'img/mix veg.jpg'},
+      {id:16,cat:'mains',name:' बैगन मसाला •baigan masala',desc:' ',price:'₹110',tags:['spicy','Gluten -free'],img:'img/baigan masala.jpg'},
+      {id:17,cat:'mains',name:'शिमला मसाला  •shimla masala',desc:' ',price:'₹110',tags:['spicy','Gluten -free'],img:'img/shimla masala.jpg'},
+      {id:18,cat:'mains',name:'आलू मसाला   •aloo masala',desc:' ',price:'₹110',tags:['spicy','Gluten -free'],img:'img/aloo masala.jpg'},
+      {id:19,cat:'mains',name:'शेवगा मसाला   •shevga masala',desc:' ',price:'₹120',tags:['spicy','Gluten -free'],img:'img/shevga masala.jpg'},
+      {id:20,cat:'mains',name:'सोयाबीन मसाला   •soyabin masala',desc:' ',price:'₹110',tags:['spicy','Gluten -free'],img:'img/soyabin masala.jpg'},
+     {id:21,cat:'mains',name:'व्हेज कोल्हापुरी • veg kolhapuri',desc:' ',price:'₹150',tags:['spicy','Gluten -free'],img:'img/vej kolhapuri.jpg'},
+     {id:22,cat:'mains',name:'पनीर टिक्का मसाला • panir tikka masala',desc:' ',price:'₹180',tags:['spicy','Gluten -free'],img:'img/panir tikka masala.jpg'},
+     {id:23,cat:'mains',name:'सोयाबीन टिक्का मसाला • soyabin tikka masala',desc:' ',price:'₹150',tags:['spicy','Gluten -free'],img:'img/soyabin tikka masala.jpg'},
+     {id:24,cat:'mains',name:'रसा प्लेट • rasa plate',desc:' ',price:'₹80',tags:['spicy','Gluten -free'],img:'img/rasa plate.jpg'},
+     {id:25,cat:'mains',name:'लसून तडका   • lasun tadka',desc:' ',price:'₹30',tags:['spicy','Gluten -free'],img:'img/lasun tadka.jpg'},
+
+      {id:1,cat:'breads',name:'भाकरी • Bhakri',desc:' ',price:'₹20',tags:['Gluten-free','Traditional'],img:'img/bajari bhakri.jpg'},
+      {id:1,cat:'breads',name:'तंदूर • tandur',desc:' ',price:'₹12',tags:['Gluten-free','Traditional'],img:'img/tandur.jpg'},
+      {id:1,cat:'breads',name:'बटर तंदूर  • butter tandur',desc:' ',price:'₹12',tags:['Gluten-free','Traditional'],img:'img/butter tandur.jpg'},
+     {id:1,cat:'breads',name:'साधा पराठ  • sadha paratha',desc:' ',price:'₹12',tags:['Gluten-free','Traditional'],img:'img/sadha paratha.jpg '},
+
+
+
+     {id:1,cat:'non veg',name:'चिकन मसाला   • chikan masala ',desc:' ',price:'₹150',tags:['Gluten-free','Traditional'],img:'img/chikan masala.jpg '},
+     {id:1,cat:'non veg',name:'अंडाकरी   • andakari ',desc:' ',price:'₹100',tags:['Gluten-free','Traditional'],img:'img/andakari.jpg '},
+     {id:1,cat:'non veg',name:'मटन मसाला • matan masala ',desc:' ',price:'₹170',tags:['Gluten-free','Traditional'],img:'img/matan masala.jpg '},
+     {id:1,cat:'non veg',name:'चिकन कंटकी •chikan kantankki ',desc:' ',price:'₹160',tags:['Gluten-free','Traditional'],img:'img/chikan kantnakki.jpg '},
+
+
+
+
+
+ {id:1,cat:'beverages',name:'चहा • Tea',desc:'Hot refreshing tea',price:'₹10.00',tags:['Hot'],img:'img/tea.jpg'},
+      {id:2,cat:'beverages',name:'स्पेशल चहा • Special Tea',desc:'Special masala tea',price:'₹30.00',tags:['Special'],img:'img/special-tea.jpg'},
+      {id:3,cat:'beverages',name:'ब्लॅक चहा • Black Tea',desc:'Tea without milk',price:'₹12.00',tags:['Strong'],img:'img/black-tea.jpg'},
+      {id:4,cat:'beverages',name:'लिंबू चहा • Lemon Tea',desc:'Tea with lemon flavor',price:'₹15.00',tags:['Refreshing'],img:'img/lemon-tea.jpg'},
+      {id:5,cat:'beverages',name:'कॉफी • Coffee',desc:'Hot brewed coffee',price:'₹30.00',tags:['Hot'],img:'img/coffee.jpg'},
+      {id:6,cat:'beverages',name:'ब्लॅक कॉफी • Black Coffee',desc:'Coffee without milk',price:'₹20.00',tags:['Strong'],img:'img/black-coffee.jpg'},
+      {id:7,cat:'beverages',name:'दूध (ग्लास) • Milk Glass',desc:'Fresh glass of milk',price:'₹25.00',tags:['Healthy'],img:'img/milk.jpg'},
+      {id:8,cat:'beverages',name:'ताक (ग्लास) • Taak Glass',desc:'Traditional buttermilk',price:'₹15.00',tags:['Digestive'],img:'img/taak.jpg'},
+      {id:9,cat:'beverages',name:'मसाला ताक • Masala Taak',desc:'Spiced buttermilk',price:'₹25.00',tags:['Spiced'],img:'img/masala-taak.jpg'},
+      {id:10,cat:'beverages',name:'दही वाटी • Dahi Vati',desc:'Curd bowl',price:'₹20.00',tags:['Healthy'],img:'img/dahi-vati.jpg'},
+      {id:11,cat:'beverages',name:'सोलकढी (ग्लास) • Solkadhi Glass',desc:'Kokum and coconut drink',price:'₹60.00',tags:['Digestive'],img:'img/solkadhi-glass.jpg'},
+      {id:12,cat:'beverages',name:'सोलकढी (वाटी) • Solkadhi Vati',desc:'Kokum and coconut bowl',price:'₹35.00',tags:['Digestive'],img:'img/solkadhi-vati.jpg'},
+      {id:13,cat:'beverages',name:'लिंबू रस • Lime Juice',desc:'Fresh lime juice',price:'₹25.00',tags:['Refreshing'],img:'img/lime-juice.jpg'},
+      {id:14,cat:'beverages',name:'कोकम शर्बत • Kokam Sarbat',desc:'Sweet kokum drink',price:'₹35.00',tags:['Sweet'],img:'img/kokam-sarbat.jpg'}
+
+
+
+    
+      {id:11,cat:'drinks',name:'लस्सी • Lassi',desc:'Sweet or salty yogurt-based refreshing drink',price:'₹50',tags:['Yogurt','Cooling'],img:'img/lassi.jpg'},
+      {id:12,cat:'drinks',name:'चहा • Chaha',desc:'Traditional Maharashtrian masala tea',price:'₹30',tags:['Tea','Hot',],img:'img/chaha.jpg'}
+    ];
+
+  
+    const menuGrid = document.getElementById('menuGrid');
+    const searchInput = document.getElementById('search');
+    const tabs = document.querySelectorAll('.tab');
+
+    function render(items){
+      menuGrid.innerHTML = items.map(i=>`
+        <article class="card" data-cat="${i.cat}">
+          <div class="thumb"><img src="${i.img}" alt="${i.name}"></div>
+          <div class="info">
+            <div style="display:flex;justify-content:space-between;align-items:start;gap:12px">
+              <div style="flex:1">
+                <h3 class="dish">${i.name}</h3>
+                <div class="desc">${i.desc}</div>
+              </div>
+              <div style="text-align:right">
+                <div class="price">${i.price}</div>
+                <div style="margin-top:8px">
+                  <button class="btn-primary" onclick="order(${i.id})">Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="meta-row">
+              <div class="tags">${i.tags.map(t=>`<span class="pill">${t}</span>`).join('')}</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function order(id){
+      const item = data.find(d=>d.id===id);
+      alert('Order placed: '+item.name+' — '+item.price);
+    }
+
+    // initial render
+    render(data);
+
+    // search
+    searchInput.addEventListener('input', ()=>{
+      const q = searchInput.value.trim().toLowerCase();
+      const filtered = data.filter(d=> (d.name+ ' '+ d.desc + ' ' + d.tags.join(' ')).toLowerCase().includes(q) );
+      render(filtered);
+    });
+
+    // tabs
+    tabs.forEach(t=>t.addEventListener('click', ()=>{
+      tabs.forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      const cat = t.getAttribute('data-cat');
+      if(cat==='all'){ render(data); return; }
+      render(data.filter(d=>d.cat===cat));
+    }));
+  </script>
+
+ 
+
+</body>
+ <!-- <footer style="margin-top:30px;text-align:center;color:#6b6b6b;font-size:14px">
+  <p>© <span id="year"></span> MenuSpeak — All rights reserved</p>
+  <p>
+    📞 <a href="tel:9284969878" style="color:inherit;text-decoration:none">9284969878</a>
+  </p>
+  <a href="https://wa.me/919284969878?text=Hello%20MenuSpeak%2C%20I%20want%20to%20know%20more%20about%20your%20interactive%20menu%20service." 
+     target="_blank" 
+     style="display:inline-block;margin-top:8px;padding:10px 16px;background:#25D366;color:white;border-radius:8px;text-decoration:none;font-weight:600">
+    💬 WhatsApp पर Contact करें
+  </a>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</footer> -->
+</html>
