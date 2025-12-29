@@ -52,7 +52,7 @@
   background: 
     radial-gradient(1200px 600px at 10% 10%, rgba(212,175,55,0.06), transparent 6%),
     radial-gradient(1000px 500px at 95% 90%, rgba(255,204,102,0.04), transparent 8%),
-    url("bg.jpeg") center/cover no-repeat,
+    url("bg.jpg") center/cover no-repeat,
     var(--bg);
   color: #e8e6e3;
   font-family: var(--ff-ui);
@@ -599,6 +599,16 @@ Mob. 9420152042 9767001252, 9657784831. <div>
 <button class="tab" data-cat="Chicken Main Course">Chicken Main Course</button>
 <button class="tab" data-cat="Aamantran Special Veg">Aamantran Special Veg</button>
 <button class="tab" data-cat="Thali">Thali</button>
+
+            <button class="tab" data-cat="Veg Starter">Veg Starter</button>
+<button class="tab" data-cat="Chicken Starter">Chicken Starter</button>
+<button class="tab" data-cat="Veg Soup">Veg Soup</button>
+<button class="tab" data-cat="Chicken Soup">Chicken Soup</button>
+<button class="tab" data-cat="Veg Rice">Veg Rice</button>
+<button class="tab" data-cat="Chicken Rice">Chicken Rice</button>
+<button class="tab" data-cat="Noodles">Noodles</button>
+
+            
             <button class="tab" data-cat="chicken">Chicken</button>
             <button class="tab" data-cat="drinks">Drinks</button>
             <button class="tab" data-cat="mutton">Mutton</button>
@@ -684,7 +694,7 @@ Mob. 9420152042 9767001252, 9657784831. <div>
   <script>
     const data = [
 
-{"id": 314, "cat": "Offers", "name": "हॅपी मील ऑफर (Happy Meal Offer)", "price": "149", "desc": "Chicken Soup Half, Fried Rice Half, Chicken Lollypop 1 Pc, 1 Cold Drink or Small Bisleri Water Bottle", "tags": ["Non-Veg", "Offer", "Combo"], "img": "img/HappyMeal.jpeg"},
+{"id": 314, "cat": "Offers", "name": "हॅपी मील ऑफर (Happy Meal Offer)", "price": "149", "desc": "Chicken Soup Half, Fried Rice Half, Chicken Lollypop 1 Pc, 1 Cold Drink or Small Bisleri Water Bottle", "tags": ["Non-Veg", "Offer", "Combo"], "img": "img/HappyMeal.jpg"},
       {"id": 300, "cat": "Chicken Starter", "name": "चिकन क्रिस्पी (Chicken Crispy) Half ", "price": "160", "desc": "Crispy fried chicken tossed in sauces", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenCrispy.jpg"},
       {"id": 3000, "cat": "Chicken Starter", "name": "चिकन क्रिस्पी (Chicken Crispy) Full", "price": "300", "desc": "Crispy fried chicken tossed in sauces", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenCrispy.jpg"},
 {"id": 301, "cat": "Chicken Starter", "name": "चिकन चिल्ली (Chicken Chilli) Half ", "price": "140", "desc": "Spicy and tangy chilli chicken", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenChilli.jpg"},
@@ -706,7 +716,52 @@ Mob. 9420152042 9767001252, 9657784831. <div>
 {"id": 313, "cat": "Thali", "name": "अंडा मसाला स्पेशल थाळी (Egg Masala Special Thali)", "price": "195", "desc": "चपाती २/भाकरी १, भात, अंडा मसाला, रस्सा, भूर्जी, आमलेट, सोलकढी (2 Chapati/ 1 Bhakri, Rice, Egg Masala, Rassa, Bhurji, Omelette, Solkadhi)", "tags": ["Non-Veg", "Special", "Thali"], "img": "img/ChickenBhakri.png"},
       
       
-      
+    {"id": 400, "cat": "Veg Starter", "name": "व्हेज मंचुरियन (Veg Manchurian - Half)", "price": "120", "desc": "Half portion", "tags": ["Veg", "Starter"], "img": "img/VegManchurian.jpg"},
+{"id": 401, "cat": "Veg Starter", "name": "व्हेज मंचुरियन (Veg Manchurian - Full)", "price": "200", "desc": "Full portion", "tags": ["Veg", "Starter"], "img": "img/VegManchurian.jpg"},
+{"id": 402, "cat": "Veg Starter", "name": "व्हेज चिल्ली (Veg Chilli - Half)", "price": "125", "desc": "Half portion", "tags": ["Veg", "Starter"], "img": "img/VegChilli.jpg"},
+{"id": 403, "cat": "Veg Starter", "name": "व्हेज चिल्ली (Veg Chilli - Full)", "price": "210", "desc": "Full portion", "tags": ["Veg", "Starter"], "img": "img/VegChilli.jpg"},
+{"id": 404, "cat": "Veg Starter", "name": "व्हेज क्रिस्पी (Veg Crispy - Half)", "price": "130", "desc": "Half portion", "tags": ["Veg", "Starter"], "img": "img/VegCrispy.jpg"},
+{"id": 405, "cat": "Veg Starter", "name": "व्हेज क्रिस्पी (Veg Crispy - Full)", "price": "200", "desc": "Full portion", "tags": ["Veg", "Starter"], "img": "img/VegCrispy.jpg"},
+{"id": 406, "cat": "Veg Starter", "name": "पनीर चिल्ली (Paneer Chilli - Half)", "price": "140", "desc": "Half portion", "tags": ["Veg", "Starter"], "img": "img/PaneerChilli.jpg"},
+{"id": 407, "cat": "Veg Starter", "name": "पनीर चिल्ली (Paneer Chilli - Full)", "price": "260", "desc": "Full portion", "tags": ["Veg", "Starter"], "img": "img/PaneerChilli.jpg"},
+{"id": 408, "cat": "Veg Soup", "name": "मंचाव सूप (Manchow Soup - Half)", "price": "50", "desc": "Half portion", "tags": ["Veg", "Soup"], "img": "img/VegManchowSoup.jpg"},
+{"id": 409, "cat": "Veg Soup", "name": "मंचाव सूप (Manchow Soup - Full)", "price": "100", "desc": "Full portion", "tags": ["Veg", "Soup"], "img": "img/VegManchowSoup.jpg"},
+{"id": 410, "cat": "Chicken Starter", "name": "चिकन चिल्ली ड्राय (Chicken Chilli Dry - Half)", "price": "140", "desc": "Half portion", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenChilliDry.jpg"},
+{"id": 411, "cat": "Chicken Starter", "name": "चिकन चिल्ली ड्राय (Chicken Chilli Dry - Full)", "price": "250", "desc": "Full portion", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenChilliDry.jpg"},
+{"id": 412, "cat": "Chicken Starter", "name": "चिकन क्रिस्पी (Chicken Crispy - Half)", "price": "160", "desc": "Half portion", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenCrispy.jpg"},
+{"id": 413, "cat": "Chicken Starter", "name": "चिकन क्रिस्पी (Chicken Crispy - Full)", "price": "300", "desc": "Full portion", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenCrispy.jpg"},
+{"id": 414, "cat": "Chicken Starter", "name": "चिकन मंचुरियन (Chicken Manchurian - Half)", "price": "140", "desc": "Half portion", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenManchurian.jpg"},
+{"id": 415, "cat": "Chicken Starter", "name": "चिकन मंचुरियन (Chicken Manchurian - Full)", "price": "250", "desc": "Full portion", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenManchurian.jpg"},
+{"id": 416, "cat": "Chicken Starter", "name": "चिकन लॉलीपॉप (Chicken Lollipop - Half)", "price": "120", "desc": "Half portion", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenLollipop.jpg"},
+{"id": 417, "cat": "Chicken Starter", "name": "चिकन लॉलीपॉप (Chicken Lollipop - Full)", "price": "240", "desc": "Full portion", "tags": ["Non-Veg", "Starter"], "img": "img/ChickenLollipop.jpg"},
+{"id": 418, "cat": "Chicken Starter", "name": "मसाला चिकन लॉलीपॉप (Masala Chicken Lollipop - Half)", "price": "150", "desc": "Half portion", "tags": ["Non-Veg", "Starter"], "img": "img/MasalaChickenLollipop.jpg"},
+{"id": 419, "cat": "Chicken Starter", "name": "मसाला चिकन लॉलीपॉप (Masala Chicken Lollipop - Full)", "price": "300", "desc": "Full portion", "tags": ["Non-Veg", "Starter"], "img": "img/MasalaChickenLollipop.jpg"},
+{"id": 420, "cat": "Chicken Soup", "name": "मंचाव सूप (Chicken Manchow Soup - Half)", "price": "60", "desc": "Half portion", "tags": ["Non-Veg", "Soup"], "img": "img/ChickenManchowSoup.jpg"},
+{"id": 421, "cat": "Chicken Soup", "name": "मंचाव सूप (Chicken Manchow Soup - Full)", "price": "110", "desc": "Full portion", "tags": ["Non-Veg", "Soup"], "img": "img/ChickenManchowSoup.jpg"},
+{"id": 422, "cat": "Veg Rice", "name": "व्हेज फ्राईड राईस (Veg Fried Rice - Half)", "price": "90", "desc": "Half portion", "tags": ["Veg", "Rice"], "img": "img/VegFriedRice.jpg"},
+{"id": 423, "cat": "Veg Rice", "name": "व्हेज फ्राईड राईस (Veg Fried Rice - Full)", "price": "160", "desc": "Full portion", "tags": ["Veg", "Rice"], "img": "img/VegFriedRice.jpg"},
+{"id": 424, "cat": "Veg Rice", "name": "व्हेज शेजवान फ्राईड राईस (Veg Schezwan Fried Rice - Half)", "price": "100", "desc": "Half portion", "tags": ["Veg", "Rice"], "img": "img/VegSchezwanRice.jpg"},
+{"id": 425, "cat": "Veg Rice", "name": "व्हेज शेजवान फ्राईड राईस (Veg Schezwan Fried Rice - Full)", "price": "190", "desc": "Full portion", "tags": ["Veg", "Rice"], "img": "img/VegSchezwanRice.jpg"},
+{"id": 426, "cat": "Chicken Rice", "name": "चिकन फ्राईड राईस (Chicken Fried Rice - Half)", "price": "110", "desc": "Half portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenFriedRice.jpg"},
+{"id": 427, "cat": "Chicken Rice", "name": "चिकन फ्राईड राईस (Chicken Fried Rice - Full)", "price": "190", "desc": "Full portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenFriedRice.jpg"},
+{"id": 428, "cat": "Chicken Rice", "name": "चिकन शेजवान फ्राईड राईस (Chicken Schezwan Fried Rice - Half)", "price": "120", "desc": "Half portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenSchezwanRice.jpg"},
+{"id": 429, "cat": "Chicken Rice", "name": "चिकन शेजवान फ्राईड राईस (Chicken Schezwan Fried Rice - Full)", "price": "210", "desc": "Full portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenSchezwanRice.jpg"},
+{"id": 430, "cat": "Chicken Rice", "name": "चिकन ट्रिपल राईस (Chicken Triple Rice - Half)", "price": "130", "desc": "Half portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenTripleRice.jpg"},
+{"id": 431, "cat": "Chicken Rice", "name": "चिकन ट्रिपल राईस (Chicken Triple Rice - Full)", "price": "250", "desc": "Full portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenTripleRice.jpg"},
+{"id": 432, "cat": "Chicken Rice", "name": "चिकन चिल्ली राईस (Chicken Chilli Rice - Half)", "price": "135", "desc": "Half portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenChilliRice.jpg"},
+{"id": 433, "cat": "Chicken Rice", "name": "चिकन चिल्ली राईस (Chicken Chilli Rice - Full)", "price": "260", "desc": "Full portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenChilliRice.jpg"},
+{"id": 434, "cat": "Chicken Rice", "name": "चिकन कॉम्बिनेशन राईस (Chicken Combination Rice - Half)", "price": "150", "desc": "Half portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenCombinationRice.jpg"},
+{"id": 435, "cat": "Chicken Rice", "name": "चिकन कॉम्बिनेशन राईस (Chicken Combination Rice - Full)", "price": "280", "desc": "Full portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenCombinationRice.jpg"},
+{"id": 436, "cat": "Chicken Rice", "name": "चिकन चॉपर राईस (Chicken Chopper Rice - Half)", "price": "130", "desc": "Half portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenChopperRice.jpg"},
+{"id": 437, "cat": "Chicken Rice", "name": "चिकन चॉपर राईस (Chicken Chopper Rice - Full)", "price": "250", "desc": "Full portion", "tags": ["Non-Veg", "Rice"], "img": "img/ChickenChopperRice.jpg"},
+{"id": 438, "cat": "Noodles", "name": "व्हेज हक्का नूडल्स (Veg Hakka Noodles - Half)", "price": "90", "desc": "Half portion", "tags": ["Veg", "Noodles"], "img": "img/VegHakkaNoodles.jpg"},
+{"id": 439, "cat": "Noodles", "name": "व्हेज हक्का नूडल्स (Veg Hakka Noodles - Full)", "price": "170", "desc": "Full portion", "tags": ["Veg", "Noodles"], "img": "img/VegHakkaNoodles.jpg"},
+{"id": 440, "cat": "Noodles", "name": "व्हेज शेजवान हक्का नूडल्स (Veg Schezwan Hakka Noodles - Half)", "price": "100", "desc": "Half portion", "tags": ["Veg", "Noodles"], "img": "img/VegSchezwanNoodles.jpg"},
+{"id": 441, "cat": "Noodles", "name": "व्हेज शेजवान हक्का नूडल्स (Veg Schezwan Hakka Noodles - Full)", "price": "180", "desc": "Full portion", "tags": ["Veg", "Noodles"], "img": "img/VegSchezwanNoodles.jpg"},
+{"id": 442, "cat": "Noodles", "name": "चिकन हक्का नूडल्स (Chicken Hakka Noodles - Half)", "price": "100", "desc": "Half portion", "tags": ["Non-Veg", "Noodles"], "img": "img/ChickenHakkaNoodles.jpg"},
+{"id": 443, "cat": "Noodles", "name": "चिकन हक्का नूडल्स (Chicken Hakka Noodles - Full)", "price": "180", "desc": "Full portion", "tags": ["Non-Veg", "Noodles"], "img": "img/ChickenHakkaNoodles.jpg"},
+{"id": 444, "cat": "Noodles", "name": "चिकन शेजवान हक्का नूडल्स (Chicken Schezwan Hakka Noodles - Half)", "price": "110", "desc": "Half portion", "tags": ["Non-Veg", "Noodles"], "img": "img/ChickenSchezwanNoodles.jpg"},
+{"id": 445, "cat": "Noodles", "name": "चिकन शेजवान हक्का नूडल्स (Chicken Schezwan Hakka Noodles - Full)", "price": "200", "desc": "Full portion", "tags": ["Non-Veg", "Noodles"], "img": "img/ChickenSchezwanNoodles.jpg"},  
       // CHICKEN DISHES
       {id:1,cat:'chicken',name:'चिकन हंडी • Chicken Handi',desc:'Half portion available',price:'₹250',tags:['H/F'],img:'img/Chicken Handi.jpg'},
       {id:9,cat:'chicken',name:'चिकन हंडी • Chicken Handi',desc:'Full portion available',price:'₹490',tags:['H/F'],img:'img/Chicken Handi.jpg'},
@@ -715,7 +770,7 @@ Mob. 9420152042 9767001252, 9657784831. <div>
       {id:4,cat:'chicken',name:'चिकन फ्राय • Chicken Fry',desc:'Crispy fried chicken',price:'₹180',tags:['Crispy'],img:'img/chicken fry.jpg'},
       {id:5,cat:'chicken',name:'चिकन कोल्हापुरी • Chicken Kolhapuri',desc:'Spicy Kolhapuri style chicken',price:'₹210',tags:['Spicy'],img:'img/chicken kolhapuri.jpg'},
       {id:6,cat:'chicken',name:'बटर चिकन बोनलेस • Butter Chicken Boneless',desc:'Creamy butter chicken',price:'₹250',tags:['Creamy'],img:'img/butter chicken boneless.jpg'},
-      {id:7,cat:'chicken',name:'चिकन रस्सा  • Chicken Rassa',desc:'Aromatic chicken biryani',price:'₹45',tags:['Rassa'],img:'img/चिकन रस्सा.jpeg'},
+      {id:7,cat:'chicken',name:'चिकन रस्सा  • Chicken Rassa',desc:'Aromatic chicken biryani',price:'₹45',tags:['Rassa'],img:'img/चिकन रस्सा.jpg'},
         
         
 
@@ -763,12 +818,12 @@ Mob. 9420152042 9767001252, 9657784831. <div>
       
 //machhidihesh DISHES
 {id: 8, cat: 'machhidihesh', name: 'बांगडा करी | Bangada Curry', desc: 'Spicy Mackerel Curry', price: '140', tags: ['Seafood', 'Gravy'], img: 'img/bangada-curry.jpg'},
-{id: 9, cat: 'machhidihesh', name: 'बांगडा फ्राय | Bangada Fry', desc: 'Fried Mackerel', price: '₹110', tags: ['Seafood', 'Fry'], img: 'img/बांगडा फ्राय.jpeg'},
+{id: 9, cat: 'machhidihesh', name: 'बांगडा फ्राय | Bangada Fry', desc: 'Fried Mackerel', price: '₹110', tags: ['Seafood', 'Fry'], img: 'img/बांगडा फ्राय.jpg'},
  {id: 9, cat: 'machhidihesh', name: 'बांगडा थाळी | Bangada Thali', desc: 'Fried Mackerel', price: '₹230', tags: ['Seafood', 'Fry'], img: 'img/bhangada thali.jpg'},     
 {id: 10, cat: 'machhidihesh', name: 'बोंबिल फ्राय (२ तुकडे) | Bombil Fry (2 Pcs)', desc: 'Fried Bombay Duck', price: '₹80', tags: ['Seafood', 'Fry'], img: 'img/bombil-fry.jpg'},
 {id: 11, cat: 'machhidihesh', name: 'बोंबिल थाळी | Bombil Thali', desc: 'Bombay Duck Thali', price: '₹190', tags: ['Seafood', 'Combo'], img: 'img/bombil thali.jpg'},
 {id: 12, cat: 'machhidihesh', name: 'कोळंबी राईस प्लेट | Prawns Rice Plate', desc: 'Prawns served with Rice', price: '₹275', tags: ['Seafood', 'Rice'], img: 'img/Prawns Rice Plate.jpg'},
-{id: 13, cat: 'machhidihesh', name: 'कोळंबी रवा फ्राय | Prawns  Fry', desc: 'Prawns fried in Semolina coating', price: 'APA/APS', tags: ['Seafood', 'Fry'], img: 'img/कोळंबी रवा फ्राय.jpeg'},
+{id: 13, cat: 'machhidihesh', name: 'कोळंबी रवा फ्राय | Prawns  Fry', desc: 'Prawns fried in Semolina coating', price: 'APA/APS', tags: ['Seafood', 'Fry'], img: 'img/कोळंबी रवा फ्राय.jpg'},
 {id: 14, cat: 'machhidihesh', name: 'पॉमफ्रेट फ्राय | Pomfret Fry', desc: 'Fried Pomfret', price: '₹APA/APS', tags: ['Seafood', 'Fry'], img: 'img/pomfret-fry.jpg'},
 {id: 15, cat: 'machhidihesh', name: 'सुरमाई फ्राय | Surmai Fry', desc: 'Fried King Fish', price: '₹APS/APS', tags: ['Seafood', 'Fry'], img: 'img/surmai-fry.jpg'},
 {id: 16, cat: 'machhidihesh', name: 'फिश रस्सा | Fish Rassa', desc: 'Spicy Fish Curry Soup', price: '₹50', tags: ['Seafood', 'Gravy'], img: 'img/fish-rassa.jpg'},
@@ -776,7 +831,7 @@ Mob. 9420152042 9767001252, 9657784831. <div>
 {id: 21, cat: 'machhidihesh', name: 'कोळंबी मसाला | kolambi masala', desc: 'Small Fish Fry Plate', price: '₹55', tags: ['Seafood', 'Fry'], img: 'img/kolambi masala.jpg'},
 {id: 18, cat: 'machhidihesh', name: 'कोळंबी राईस प्लेट  | kolambi rais plate', desc: 'Small Fish Fry Plate', price: '₹235', tags: ['Seafood', 'Fry'], img: 'img/prawns-rice.jpg'},      
 {id: 19, cat: 'machhidihesh', name: 'कोळंबी  फ्राय | Prawns  Fry', desc: 'Prawns fried in Semolina coating', price: 'APA/APS', tags: ['Seafood', 'Fry'], img: 'img/prawns-rava-fry.jpg'},
-// {id: 20, cat: 'machhidihesh', name: 'बांगडा फ्राय | Bangada Fry', desc: 'Prawns fried in Semolina coating', price: 'APA/APS', tags: ['Seafood', 'Fry'], img: 'img/bangda fry.jpeg'},
+// {id: 20, cat: 'machhidihesh', name: 'बांगडा फ्राय | Bangada Fry', desc: 'Prawns fried in Semolina coating', price: 'APA/APS', tags: ['Seafood', 'Fry'], img: 'img/bangda fry.jpg'},
 
 
 
@@ -855,8 +910,8 @@ Mob. 9420152042 9767001252, 9657784831. <div>
    //maunsahari DISHES.
       
 {id: 64, cat: 'maunsahari', name: 'मटण वडा थाळी | Mutton Vade Thali', desc: '4 Vade, Rice, Mutton Masala, Mutton Rassa, Solkadhi', price: '₹330', tags: ['Mutton', 'Thali'], img: 'img/mutton-vade-thali.jpg'},
-{id: 65, cat: 'maunsahari', name: 'मटण राईस थाळी | Mutton Rice Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Mutton Sukka, Mutton Rassa, Solkadhi', price: '₹290', tags: ['Mutton', 'Thali'], img: 'img/मटण राईस थाळी.jpeg'},
-{id: 71, cat: 'maunsahari', name: 'स्पेशल मटण राईस थाळी | Mutton Rice Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Mutton Sukka, Mutton Rassa, Solkadhi', price: '₹290', tags: ['Mutton', 'Thali'], img: 'img/स्पेशल मटण राईस थाळी.jpeg'},
+{id: 65, cat: 'maunsahari', name: 'मटण राईस थाळी | Mutton Rice Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Mutton Sukka, Mutton Rassa, Solkadhi', price: '₹290', tags: ['Mutton', 'Thali'], img: 'img/मटण राईस थाळी.jpg'},
+{id: 71, cat: 'maunsahari', name: 'स्पेशल मटण राईस थाळी | Mutton Rice Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Mutton Sukka, Mutton Rassa, Solkadhi', price: '₹290', tags: ['Mutton', 'Thali'], img: 'img/स्पेशल मटण राईस थाळी.jpg'},
 {id: 66, cat: 'maunsahari', name: 'मटण स्पेशल राईस प्लेट | Mutton Special Rice Plate', desc: '2 Chapati OR 1 Bhakari, Mutton Kheema, Mutton Masala, Mutton Rassa Vati, Rice Vati, Solkadhi', price: '₹395', tags: ['Mutton', 'Special'], img: 'img/mutton-special-plate.jpg'},
 {id: 67, cat: 'maunsahari', name: 'चिकन वडा थाळी | Chicken Vade Thali', desc: '4 Vade, Rice, Chicken Masala, Chicken Rassa, Solkadhi Vati', price: '₹250', tags: ['Chicken', 'Thali'], img: 'img/chicken-vade-thali.jpg'},
 {id: 68, cat: 'maunsahari', name: 'चिकन राईस थाळी | Chicken Rice Thali', desc: '2 Chapati OR 1 Bhakari, Rice, Chicken Sukka, Chicken Rassa, Solkadhi', price: '₹220', tags: ['Chicken', 'Thali'], img: 'img/chicken-rice-thali.jpg'},
@@ -880,18 +935,18 @@ Mob. 9420152042 9767001252, 9657784831. <div>
 {id: 101, cat: 'veg', name: 'डाल खिचड़ी तडका | Dal Khichadi Tadka', desc: 'Tempered lentil-rice mixture', price: '₹190', tags: ['Veg', 'Rice'], img: 'img/dal-khichadi-tadka.jpg'},
 {id: 143, cat: 'veg', name: 'पनीर मसाला | Paneer Masala', desc: 'Paneer in spicy gravy', price: 'H: ₹100', tags: ['Veg', 'Main Course'], img: 'img/paneer-masala.jpg'},
 {id: 102, cat: 'veg', name: 'पनीर मसाला | Paneer Masala', desc: 'Paneer in spicy gravy', price: 'F: ₹180', tags: ['Veg', 'Main Course'], img: 'img/paneer-masala.jpg'},
-{id: 144, cat: 'veg', name: 'भात वाटी | Plain Rice', desc: 'Plain steamed rice', price: 'F: ₹55', tags: ['Veg', 'Rice'], img: 'img/भात वाटी.jpeg'},
-{id: 103, cat: 'veg', name: 'भात वाटी | Plain Rice', desc: 'Plain steamed rice', price: 'H: ₹30', tags: ['Veg', 'Rice'], img: 'img/भात वाटी.jpeg'},
+{id: 144, cat: 'veg', name: 'भात वाटी | Plain Rice', desc: 'Plain steamed rice', price: 'F: ₹55', tags: ['Veg', 'Rice'], img: 'img/भात वाटी.jpg'},
+{id: 103, cat: 'veg', name: 'भात वाटी | Plain Rice', desc: 'Plain steamed rice', price: 'H: ₹30', tags: ['Veg', 'Rice'], img: 'img/भात वाटी.jpg'},
 {id: 104, cat: 'veg', name: 'भाजी वाटी | Bhaji Vati', desc: 'Vegetable curry bowl', price: '₹35', tags: ['Veg', 'Side'], img: 'img/bhaji-vati.jpg'},
-{id: 105, cat: 'veg', name: 'डाळ वाटी | Dal Vati', desc: 'Lentil bowl', price: '₹35', tags: ['Veg', 'Side'], img: 'img/डाळ वाटी.jpeg'},
+{id: 105, cat: 'veg', name: 'डाळ वाटी | Dal Vati', desc: 'Lentil bowl', price: '₹35', tags: ['Veg', 'Side'], img: 'img/डाळ वाटी.jpg'},
 {id: 106, cat: 'veg', name: 'उसळ वाटी | Usal Vati', desc: 'Sprouted curry bowl', price: '₹35', tags: ['Veg', 'Side'], img: 'img/usal-vati.jpg'},
 {id: 107, cat: 'veg', name: 'पापड (फ्राय/रोस्टेड) | Papad (Fried/Roasted)', desc: 'Crispy papad', price: '₹40', tags: ['Veg', 'Side'], img: 'img/papad.jpg'},
 {id: 108, cat: 'veg', name: 'काजू मसाला | Kaju Masala', desc: 'Cashew in gravy', price: '₹240', tags: ['Veg', 'Main Course'], img: 'img/kaju-masala.jpg'},
 {id: 109, cat: 'veg', name: 'पनीर कढाई | Paneer Kadhai', desc: 'Paneer in kadhai gravy', price: '₹230', tags: ['Veg', 'Main Course'], img: 'img/paneer-kadhai.jpg'},
 {id: 110, cat: 'veg', name: 'ग्रीन पीस मसाला | Green Peas Masala', desc: 'Green peas in gravy', price: 'F: ₹130', tags: ['Veg', 'Main Course'], img: 'img/green-peas-masala.jpg'},
  {id: 145, cat: 'veg', name: 'ग्रीन पीस मसाला | Green Peas Masala', desc: 'Green peas in gravy', price: 'H: ₹75,', tags: ['Veg', 'Main Course'], img: 'img/green-peas-masala.jpg'},
-{id: 146, cat: 'veg', name: 'आलू मटर | Aloo Mutter', desc: 'Potato and peas curry', price: 'F: ₹130', tags: ['Veg', 'Main Course'], img: 'img/आलू मटर.jpeg'},
-{id: 111, cat: 'veg', name: 'आलू मटर | Aloo Mutter', desc: 'Potato and peas curry', price: 'H: ₹70', tags: ['Veg', 'Main Course'], img: 'img/आलू मटर.jpeg'},
+{id: 146, cat: 'veg', name: 'आलू मटर | Aloo Mutter', desc: 'Potato and peas curry', price: 'F: ₹130', tags: ['Veg', 'Main Course'], img: 'img/आलू मटर.jpg'},
+{id: 111, cat: 'veg', name: 'आलू मटर | Aloo Mutter', desc: 'Potato and peas curry', price: 'H: ₹70', tags: ['Veg', 'Main Course'], img: 'img/आलू मटर.jpg'},
 {id: 147, cat: 'veg', name: 'मिक्स वेग | Mix Veg', desc: 'Mixed vegetable curry', price: 'H: ₹75', tags: ['Veg', 'Main Course'], img: 'img/mix-veg.jpg'},
 {id: 112, cat: 'veg', name: 'मिक्स वेग | Mix Veg', desc: 'Mixed vegetable curry', price: 'F: ₹150', tags: ['Veg', 'Main Course'], img: 'img/mix-veg.jpg'},
 {id: 113, cat: 'veg', name: 'वेज कोल्हापुरी | Veg Kolhapuri', desc: 'Spicy Kolhapuri vegetables', price: 'F: ₹225', tags: ['Veg', 'Spicy'], img: 'img/veg-kolhapuri.jpg'},
@@ -911,19 +966,19 @@ Mob. 9420152042 9767001252, 9657784831. <div>
 {id: 120, cat: 'bhojan', name: 'पोळी भाजी | Poli Bhaji', desc: '2 Poli/Chapati OR 1 Bhakari, Bhaji Vati, Koshimbir', price: '₹65', tags: ['Veg', 'Combo'], img: 'img/poli-bhaji.jpg'},
 {id: 121, cat: 'bhojan', name: 'मिनी थाळी | Mini Thali', desc: '2 Poli/Chapati OR 1 Bhakari, Bhaji Vati, Rice Vati, Dal Vati, Koshimbir', price: '₹95', tags: ['Veg', 'Thali'], img: 'img/mini-thali.jpg'},
 {id: 122, cat: 'bhojan', name: 'लिमिटेड व्हेज थाळी (रेग्युलर) | Limited Veg Thali (Regular)', desc: '2 Poli/Chapati OR 1 Bhakari, Bhaji Vati, Usal Vati, Rice Vati, Dal Vati, Taak/Solkadhi Vati, Papad, Lonche, Koshimbir', price: '₹130', tags: ['Veg', 'Thali'], img: 'img/limited-veg-thali.jpg'},
-{id: 123, cat: 'bhojan', name: 'स्पेशल व्हेज थाळी | Special veg Plate', desc: '2 Poli/Chapati OR 1 Bhakari, Punjabi Dish, Usal Vati, Dal Vati, Jeera Rice, Taak/Solkadhi Vati, Papad, Lonche, Koshimbir', price: '₹150', tags: ['Veg', 'Special'], img: 'img/आमंत्रण स्पेशल व्हेज थाळी.jpeg'},
-{id: 124, cat: 'bhojan', name: 'आमंत्रण स्पेशल व्हेज थाळी | Amantran Special veg Plate', desc: '2 Poli/Chapati OR 1 Bhakari, 2 Punjabi Dishes, Usal Vati, Dal Vati, Jeera Rice, Taak/Solkadhi Vati, Papad, Lonche, Koshimbir, Sweet Dish', price: '₹180', tags: ['Veg', 'Special'], img: 'img/स्पेशल थाळी.jpeg'},
+{id: 123, cat: 'bhojan', name: 'स्पेशल व्हेज थाळी | Special veg Plate', desc: '2 Poli/Chapati OR 1 Bhakari, Punjabi Dish, Usal Vati, Dal Vati, Jeera Rice, Taak/Solkadhi Vati, Papad, Lonche, Koshimbir', price: '₹150', tags: ['Veg', 'Special'], img: 'img/आमंत्रण स्पेशल व्हेज थाळी.jpg'},
+{id: 124, cat: 'bhojan', name: 'आमंत्रण स्पेशल व्हेज थाळी | Amantran Special veg Plate', desc: '2 Poli/Chapati OR 1 Bhakari, 2 Punjabi Dishes, Usal Vati, Dal Vati, Jeera Rice, Taak/Solkadhi Vati, Papad, Lonche, Koshimbir, Sweet Dish', price: '₹180', tags: ['Veg', 'Special'], img: 'img/स्पेशल थाळी.jpg'},
 {id: 125, cat: 'bhojan', name: 'वांग भाकरी | Vang Bhakari', desc: 'Masala Vaang, 2 Tandul Bhakari, Lonche, Koshimbir', price: '₹115', tags: ['Veg', 'Combo'], img: 'img/vang-bhakari.jpg'},
-{id: 125, cat: 'bhojan', name: 'मसाला वांग/तेल वांग  | Masala Vaang/ Tel Vaang', desc: 'Masala Vaang, 2 Tandul Bhakari, Lonche, Koshimbir', price: '₹115', tags: ['Veg', 'Combo'], img: 'img/मसाला वांग तेल वांग.jpeg'},
+{id: 125, cat: 'bhojan', name: 'मसाला वांग/तेल वांग  | Masala Vaang/ Tel Vaang', desc: 'Masala Vaang, 2 Tandul Bhakari, Lonche, Koshimbir', price: '₹115', tags: ['Veg', 'Combo'], img: 'img/मसाला वांग तेल वांग.jpg'},
 {id: 152, cat: 'bhojan', name: 'झुणका/पिटळे भाकरी | Jhunka/Pitale Bhakari', desc: 'Jhunka, 2 Tandul Bhakari, Mirchi Kharda/Lonche', price: '₹95', tags: ['Veg', 'Combo'], img: 'img/jhunka-bhakari.jpg'},
-{id: 126, cat: 'bhojan', name: 'जवळा भाकरी | Javla Bhakari', desc: 'Jhunka, 2 Tandul Bhakari, Mirchi Kharda/Lonche', price: '₹25', tags: ['Veg', 'Combo'], img: 'img/जवळा भाकरी.jpeg'},
+{id: 126, cat: 'bhojan', name: 'जवळा भाकरी | Javla Bhakari', desc: 'Jhunka, 2 Tandul Bhakari, Mirchi Kharda/Lonche', price: '₹25', tags: ['Veg', 'Combo'], img: 'img/जवळा भाकरी.jpg'},
 //alpohar
 // SNACKS & PAV ITEMS
       
-{id: 127, cat: 'alpohar', name: 'दही बटाटा वडा (सिंगल) | Dahi Batata Vada (Single)', desc: 'Curd with potato vada', price: '₹25', tags: ['Veg', 'Snack'], img: 'img/singal.jpeg'},
-{id: 128, cat: 'alpohar', name: 'दही बटाटा वडा (डबल) | Dahi Batata Vada (Double)', desc: 'Double portion of curd with potato vada', price: '₹50', tags: ['Veg', 'Snack'], img: 'img/double.jpeg'},
-{id: 129, cat: 'alpohar', name: 'रस्सा वडा (सिंगल, पाव शिवाय) | Rassavada (Single, Without Pav)', desc: 'Spicy vada in gravy without bread', price: '₹45', tags: ['Veg', 'Snack'], img: 'img/rassa.jpeg'},
-{id: 130, cat: 'alpohar', name: 'रस्सा वडा (डबल, पाव शिवाय) | Rassavada (Double, Without Pav)', desc: 'Double vada in gravy without bread', price: '₹45', tags: ['Veg', 'Snack'], img: 'img/rassa.jpeg'},
+{id: 127, cat: 'alpohar', name: 'दही बटाटा वडा (सिंगल) | Dahi Batata Vada (Single)', desc: 'Curd with potato vada', price: '₹25', tags: ['Veg', 'Snack'], img: 'img/singal.jpg'},
+{id: 128, cat: 'alpohar', name: 'दही बटाटा वडा (डबल) | Dahi Batata Vada (Double)', desc: 'Double portion of curd with potato vada', price: '₹50', tags: ['Veg', 'Snack'], img: 'img/double.jpg'},
+{id: 129, cat: 'alpohar', name: 'रस्सा वडा (सिंगल, पाव शिवाय) | Rassavada (Single, Without Pav)', desc: 'Spicy vada in gravy without bread', price: '₹45', tags: ['Veg', 'Snack'], img: 'img/rassa.jpg'},
+{id: 130, cat: 'alpohar', name: 'रस्सा वडा (डबल, पाव शिवाय) | Rassavada (Double, Without Pav)', desc: 'Double vada in gravy without bread', price: '₹45', tags: ['Veg', 'Snack'], img: 'img/rassa.jpg'},
 // {id: 131, cat: 'alpohar', name: 'रस्सा वडा (सिंगल, १ पाव) | Rassavada (Single, 1 Pav)', desc: 'Single vada in gravy with 1 bread', price: '₹40', tags: ['Veg', 'Snack'], img: 'img/rassavada-single-1pav.jpg'},
 // {id: 132, cat: 'alpohar', name: 'रस्सा वडा (सिंगल, २ पाव) | Rassavada (Single, 2 Pav)', desc: 'Single vada in gravy with 2 bread', price: '₹50', tags: ['Veg', 'Snack'], img: 'img/rassavada-single-2pav.jpg'},
 // {id: 133, cat: 'alpohar', name: 'रस्सा वडा (डबल, १ पाव) | Rassavada (Double, 1 Pav)', desc: 'Double vada in gravy with 1 bread', price: '₹55', tags: ['Veg', 'Snack'], img: 'img/rassavada-double-1pav.jpg'},
@@ -937,7 +992,7 @@ Mob. 9420152042 9767001252, 9657784831. <div>
 // BREAKFAST & SNACK ITEMS
 {id: 141, cat: 'breakfast', name: 'कांदा पोहे | Kanda Pohe', desc: 'Flattened rice with onions and spices', price: '₹35', tags: ['Veg', 'Breakfast'], img: 'img/kanda-pohe.jpg'},
 {id: 142, cat: 'breakfast', name: 'उपीठ/उपमा | Upeeth/Upma', desc: 'Savory semolina dish', price: '₹40', tags: ['Veg', 'Breakfast'], img: 'img/upma.jpg'},
-{id: 143, cat: 'breakfast', name: 'शिरा | Shira', desc: 'Sweet semolina pudding', price: '₹50', tags: ['Veg', 'Breakfast', 'Sweet'], img: 'img/shira.jpeg'},
+{id: 143, cat: 'breakfast', name: 'शिरा | Shira', desc: 'Sweet semolina pudding', price: '₹50', tags: ['Veg', 'Breakfast', 'Sweet'], img: 'img/shira.jpg'},
 {id: 144, cat: 'breakfast', name: 'कांदा पोहे उपमा मिक्स | Kanda Pohe Upma Mix', desc: 'Mix of poha and upma', price: '₹50', tags: ['Veg', 'Breakfast'], img: 'img/pohe-upma-mix.jpg'},
 {id: 145, cat: 'breakfast', name: 'उपमा शिरा मिक्स | Upma Shira Mix', desc: 'Mix of upma and shira', price: '₹50', tags: ['Veg', 'Breakfast', 'Sweet'], img: 'img/upma-shira-mix.jpg'},
 {id: 146, cat: 'breakfast', name: 'उसळ पाव | Usal Pav', desc: 'Spicy curry with bread', price: '₹45', tags: ['Veg', 'Breakfast'], img: 'img/usal-pav.jpg'},
@@ -946,7 +1001,7 @@ Mob. 9420152042 9767001252, 9657784831. <div>
 {id: 149, cat: 'breakfast', name: 'दही मिसळ | Dahi Misal', desc: 'Misal with yogurt', price: '₹70', tags: ['Veg', 'Breakfast'], img: 'img/dahi-misal.jpg'},
 {id: 150, cat: 'breakfast', name: 'पुरी भाजी (सुकी) | Puri Bhaji (Suki)', desc: 'Fried bread with dry vegetable', price: '₹65', tags: ['Veg', 'Breakfast'], img: 'img/puri-bhaji.jpg'},
 {id: 151, cat: 'breakfast', name: 'पुरी भाजी मिक्स | Puri Bhaji Mix', desc: 'Puri with mixed vegetables', price: '₹75', tags: ['Veg', 'Breakfast'], img: 'img/puri-bhaji-mix.jpg'},
-{id: 152, cat: 'breakfast', name: 'पुरी प्लेट | Puri Plate', desc: 'Plate of puri', price: '₹40', tags: ['Veg', 'Breakfast'], img: 'img/puri-plate.jpeg'},
+{id: 152, cat: 'breakfast', name: 'पुरी प्लेट | Puri Plate', desc: 'Plate of puri', price: '₹40', tags: ['Veg', 'Breakfast'], img: 'img/puri-plate.jpg'},
 {id: 153, cat: 'breakfast', name: 'कांदा भजी | Kanda Bhaji', desc: 'Onion fritters', price: '₹40', tags: ['Veg', 'Snack'], img: 'img/kanda-bhaji.jpg'},
 {id: 154, cat: 'breakfast', name: 'कांदा गोल भजी | Kanda Gol Bhaji', desc: 'Round onion fritters', price: '₹40', tags: ['Veg', 'Snack'], img: 'img/kanda-gol-bhaji.jpg'},
 {id: 155, cat: 'breakfast', name: 'बटाटा भाजी | Batata Bhaji', desc: 'Potato fritters', price: '₹35', tags: ['Veg', 'Snack'], img: 'img/batata-bhaji.jpg'},
@@ -965,7 +1020,7 @@ Mob. 9420152042 9767001252, 9657784831. <div>
 {id: 165, cat: 'upavas', name: 'साबुदाणा थालीपीठ | Sabudana Thalipeeth', desc: 'Tapioca pearl multigrain flatbread (Fasting Special)', price: '₹80', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/sabudana-thalipeeth.jpg'},
 {id: 166, cat: 'upavas', name: 'फ्रेंच फ्रायस | French Fries', desc: 'Potato fries (Fasting Special)', price: '₹80', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/french-fries.jpg'},
 {id: 167, cat: 'upavas', name: 'उपवास भजणी थालीपीठ | Upvas Bhajani Thalipeeth', desc: 'Fasting special multigrain flatbread', price: '₹75', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/upvas-thalipeeth.jpg'},
-{id: 168, cat: 'upavas', name: 'उपवास मिसळ | Upvas Misal', desc: 'Fasting special sprouted curry', price: '₹85', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/upvas-misal.jpeg'},
+{id: 168, cat: 'upavas', name: 'उपवास मिसळ | Upvas Misal', desc: 'Fasting special sprouted curry', price: '₹85', tags: ['Veg', 'Upvas', 'Fasting'], img: 'img/upvas-misal.jpg'},
 
 
 
@@ -1268,6 +1323,7 @@ Mob. 9420152042 9767001252, 9657784831. <div>
   </script>
 </body>
 </html>
+
 
 
 
